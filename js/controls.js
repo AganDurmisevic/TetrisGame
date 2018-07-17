@@ -1,25 +1,47 @@
+const DOWN = 40;
+const LEFT = 37;
+const RIGHT = 39;
+const ROTATE_1 = 69;
+const ROTATE_2 = 81;
+
 document.onkeydown = function(e) {
     switch(e.keycode) {
+
         //down
-        case 40: {
+        case DOWN: {
+
             moveDown();
+
         }
+
         //left
-        case 37: {
+        case LEFT: {
+
             moveLeft();
+
         }
+
         //right
-        case 39: {
+        case RIGHT: {
+
             moveRight();
+
         }
+
         //rotate clockwise
-        case 69: {
+        case ROTATE_1: {
+
             rotateClockwise();
+
         }
+
         //rotate counterclockwise
-        case 81: {
+        case ROTATE_2: {
+
             rotateCounterClockwise();
+
         }
 
     }
+
 }
