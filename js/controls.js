@@ -4,13 +4,14 @@ const RIGHT = 39;
 const ROTATE_L = 69;
 const ROTATE_R = 81;
 
-document.onkeydown = function(e) {
-    switch(e.keycode) {
+document.addEventListener('keydown', e => {
+    switch(e.keyCode) {
 
         //down
         case DOWN: {
 
             moveDown();
+            break;
 
         }
 
@@ -18,6 +19,7 @@ document.onkeydown = function(e) {
         case LEFT: {
 
             moveLeft();
+            break;
 
         }
 
@@ -25,6 +27,7 @@ document.onkeydown = function(e) {
         case RIGHT: {
 
             moveRight();
+            break;
 
         }
 
@@ -32,6 +35,7 @@ document.onkeydown = function(e) {
         case ROTATE_L: {
 
             rotateClockwise();
+            break;
 
         }
 
@@ -39,9 +43,10 @@ document.onkeydown = function(e) {
         case ROTATE_R: {
 
             rotateCounterClockwise();
+            break;
 
         }
 
     }
 
-}
+});
