@@ -33,11 +33,22 @@ function collide(arena, player) {
 }
 
 function drawWorld() {
-    context.fillStyle = '#2B3D51';
-    context.fillRect(0, 0, canvas.width, canvas.height);
 
-    drawMatrix(arena, {x: 0, y: 0});
-    drawMatrix(player.matrix, player.pos);
+    if(!(collide(arena, player))) {
+
+        context.fillStyle = '#2B3D51';
+        context.fillRect ( 0, 0, canvas.width, canvas.height );
+
+        drawMatrix ( arena, { x: 0, y: 0 } );
+        drawMatrix ( player.matrix, player.pos );
+
+    }
+
+    else {
+
+        clearInterval(interval);
+
+    }
 
 
 }
@@ -86,6 +97,8 @@ function tileReset() {
     player.pos.y = 0;
     player.pos.x = (arena[0].length / 2 | 0) -
                    (player.matrix[0].length / 2 | 0);
+
+    gameOver();
 
 }
 

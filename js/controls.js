@@ -5,6 +5,7 @@ const ROTATE_L = 69;
 const ROTATE_R = 81;
 const PAUSE = 80;
 const START = 32;
+const ENTER = 13;
 
 var startmode = function(e) {
 
@@ -74,7 +75,6 @@ var standardmode = function(e) {
             break;
         }
 
-
     }
 
 }
@@ -96,6 +96,24 @@ var breakmode = function(e) {
 
 }
 
+var gameOverMode = function(e) {
+
+    switch (e.keyCode) {
+
+        case ENTER: {
+
+            document.onkeydown = startmode;
+            gameOverAnim.style.visibility = 'hidden';
+            javascript:location.reload ();
+
+            break;
+
+        }
+
+    }
+
+}
+
 document.onkeydown = startmode;
-document.getElementById('score').innerHTML = "";
+document.getElementById('score').innerHTML = "SCORE" + " " + " : ";
 start.style.visibility = 'visible';

@@ -12,7 +12,7 @@ html, body {
 
 }
 
-#pause, #start {
+#pause, #start, #gameOverAnim {
 
     visibility: hidden;
     position: fixed;
