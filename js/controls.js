@@ -105,7 +105,7 @@ var gameOverMode = function(e) {
             document.onkeydown = startmode;
             gameOverAnim.style.visibility = 'hidden';
             javascript:location.reload ();
-
+            
             break;
 
         }
