@@ -1,8 +1,8 @@
 const DOWN = 40;
 const LEFT = 37;
 const RIGHT = 39;
-const ROTATE_1 = 69;
-const ROTATE_2 = 81;
+const ROTATE_L = 69;
+const ROTATE_R = 81;
 
 document.onkeydown = function(e) {
     switch(e.keycode) {
@@ -29,14 +29,14 @@ document.onkeydown = function(e) {
         }
 
         //rotate clockwise
-        case ROTATE_1: {
+        case ROTATE_L: {
 
             rotateClockwise();
 
         }
 
         //rotate counterclockwise
-        case ROTATE_2: {
+        case ROTATE_R: {
 
             rotateCounterClockwise();
 
