@@ -13,6 +13,8 @@ var startmode = function(e) {
         case START : {
             interval = setInterval(moveDown, 1000);
             start.style.visibility = 'hidden';
+            tileReset();
+            drawWorld();
             document.onkeydown = standardmode;
             break;
 
@@ -52,7 +54,7 @@ var standardmode = function(e) {
         //rotate clockwise
         case ROTATE_L: {
 
-            rotateClockwise();
+            rotateClockwise(player.matrix);
             break;
 
         }
@@ -60,7 +62,7 @@ var standardmode = function(e) {
         //rotate counterclockwise
         case ROTATE_R: {
 
-            rotateCounterClockwise();
+            rotateCounterClockwise(player.matrix);
             break;
 
         }

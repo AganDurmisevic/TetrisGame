@@ -43,7 +43,6 @@ function drawWorld() {
 }
 
 const player = {
-<<<<<<< HEAD
     pos: {
         x: 0,
         y: 0,
@@ -51,17 +50,10 @@ const player = {
     matrix: null,
 };
 
-=======
-    x: 4,
-    y: 0,
-    matrix: null,
-};
-
 const offset = {
     x: 4,
     y: 0,
 }
->>>>>>> 8fa3bc141dea9afb027241ab369a190f064169be
 
 
 function drawMatrix(matrix, offset) {
@@ -107,5 +99,3 @@ function merge(arena, player) {
     });
 }
 
-tileReset();
-drawWorld();
