@@ -23,9 +23,129 @@ html, body {
 
 }
 
+#menu {
+
+    margin: 0;
+    padding-top: 140px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: #39485E;
+    color: #39485E;
+    z-index: 20;
+
+}
+
+#close {
+
+    background: gray;
+    font-size: 40px;
+    font-weight: bolder;
+    font-family: "Nanum Pen Script", "Marker Felt", sans-serif;
+    width: 50px;
+    height: 50px;
+    float: right;
+    margin-top: -80px;
+    border-radius: 12px;
+    margin-right: 40px;
+    text-align: center;
+
+}
+
+#tetris {
+
+    background: #2B3D51;
+    width: 380px;
+    height: 100px;
+    padding: 10px;
+    margin: auto;
+    margin-top: 5%;
+    font-family: "Nanum Pen Script", "Marker Felt", sans-serif;
+    border-radius: 14px;
+    font-size: 80px;
+    color: white;
+
+}
+
+#highscore {
+
+    background: #2B3D51;
+    width: 380px;
+    height: 100px;
+    padding: 10px;
+    margin: auto;
+    margin-top: 5%;
+    font-family: "Nanum Pen Script", "Marker Felt", sans-serif;
+    border-radius: 14px;
+    font-size: 80px;
+    color: white;
+
+}
+
+#versus {
+
+    background: #2B3D51;
+    width: 380px;
+    height: 100px;
+    padding: 10px;
+    margin: auto;
+    margin-top: 5%;
+    font-family: "Nanum Pen Script", "Marker Felt", sans-serif;
+    border-radius: 14px;
+    font-size: 80px;
+    color: white;
+
+}
+
+#close:hover, #tetris:hover, #highscore:hover, #versus:hover {
+
+    background: dimgray;
+    transform: scale(1.1);
+    cursor: pointer;
+
+}
+
 .activ {
 
     visibility: visible;
+
+}
+
+#mainMenu {
+
+    position: absolute;
+    width: 220px;
+    height: 80px;
+    background: orangered;
+    margin: 0;
+    padding: 0;
+    top: 100px;
+    float: left;
+    left: -180px;
+    border-radius: 20px;
+    font-family: "Nanum Pen Script", "Marker Felt", sans-serif;
+    font-size: 44px;
+    vertical-align: center;
+    transition: left 1.5s;
+
+}
+
+#mainMenu span {
+
+    position: relative;
+    top: 12px;
+    color: white;
+
+
+}
+
+#mainMenu:hover {
+
+    left: 12px;
+    cursor: pointer;
+
 
 }
 
