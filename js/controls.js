@@ -12,6 +12,7 @@ var startmode = function(e) {
 
         case START : {
             interval = setInterval(moveDown, 1000);
+            start.style.visibility = 'hidden';
             document.onkeydown = standardmode;
             break;
 
@@ -67,7 +68,7 @@ var standardmode = function(e) {
         case PAUSE: {
             clearInterval(interval);
             document.onkeydown = breakmode;
-            document.getElementById('score').innerHTML = "PRESS SPACE TO CONTINUE";
+            pause.style.visibility = 'visible';
             break;
         }
 
@@ -84,6 +85,7 @@ var breakmode = function(e) {
 
             interval = setInterval(moveDown, 1000);
             document.onkeydown = standardmode;
+            pause.style.visibility = 'hidden';
             break;
 
         }
@@ -93,4 +95,5 @@ var breakmode = function(e) {
 }
 
 document.onkeydown = startmode;
-document.getElementById('score').innerHTML = "PRESS SPACE TO PLAY";
+document.getElementById('score').innerHTML = "";
+start.style.visibility = 'visible';

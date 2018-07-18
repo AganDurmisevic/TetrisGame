@@ -27,13 +27,13 @@ function drawWorld() {
 }
 
 const player = {
-    x: 0,
+    x: 4,
     y: 0,
     matrix: null,
 };
 
 const offset = {
-    x: 0,
+    x: 4,
     y: 0,
 }
 
