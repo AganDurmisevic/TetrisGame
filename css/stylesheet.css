@@ -12,6 +12,23 @@ html, body {
 
 }
 
+#pause, #start {
+
+    visibility: hidden;
+    position: fixed;
+    color: #DFDEFB;
+    font-size: 45px;
+    margin-left: 10px;
+    animation: pause 2s infinite;
+
+}
+
+.activ {
+
+    visibility: visible;
+
+}
+
 #score {
 
     position: fixed;
@@ -26,5 +43,34 @@ canvas {
 
     height: 90vh;
     border: solid .2em #fff;
+
+}
+
+@keyframes pause {
+
+    25% {
+
+        transform: scale(1);
+
+    }
+
+    50% {
+
+        transform: scale(1.4);
+        color: orangered;
+
+    }
+
+    75% {
+
+        transform: scale(0.8);
+
+    }
+
+    100% {
+
+        transform: scale(1);
+
+    }
 
 }
