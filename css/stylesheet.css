@@ -54,6 +54,24 @@ html, body {
 
 }
 
+#closeList {
+
+    background: gray;
+    font-size: 40px;
+    font-weight: bolder;
+    font-family: "Nanum Pen Script", "Marker Felt", sans-serif;
+    width: 50px;
+    height: 50px;
+    float: right;
+    margin-top: -165px;
+    border-radius: 12px;
+    margin-right: 40px;
+    text-align: center;
+    color: #39485E;
+    cursor: pointer;
+
+}
+
 #tetris {
 
     background: #2B3D51;
@@ -159,10 +177,35 @@ html, body {
 
 }
 
+#scoreList {
+
+    visibility: hidden;
+    position: absolute;
+    visibility: visible;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    left: 0;
+    top: 0;
+    background: #39485E;
+    z-index: 15;
+
+}
+
+h1 {
+
+    color: orangered;
+    font-size: 90px;
+    font-family: "Nanum Pen Script", "Marker Felt", sans-serif;
+
+}
+
 canvas {
 
     height: 90vh;
     border: solid .2em #fff;
+    z-index: 5;
 
 }
 

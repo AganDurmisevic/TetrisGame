@@ -11,25 +11,41 @@
 
 </head>
 <body>
+    <!-- Menu -->
     <div id="menu" class="activ">
-        <div id="close" onclick="myFunction()">X</div>
+        <!-- Buttons -->
+        <div id="close" onclick="myFunction()"> X </div>
         <div id="tetris" onclick="myFunction()"> Start </div>
-        <div id="highscore" onclick="#"> Highscore </div>
+        <div id="highscore" onclick="myScore()"> Highscore </div>
         <div id="versus" onclick="#"> 1 vs 1 </div>
     </div>
+
+    <!-- Highscorelist -->
+    <div id="scoreList"><h1>HIGHSCORE</h1><div id="closeList" onclick="myFunction()"> X </div></div>
+
+    <!-- Text -->
     <div id="pause" class="activ">PAUSED</div>
     <div id="start" class="activ">PRESS SPACE TO START</div>
-    <div id="mainMenu" onclick="newFunction()"><span>MENU</span></div>
     <div id="gameOverAnim" class="activ">GAME OVER</div>
     <div id="score">SCORE: 0000</div>
+
+    <!-- Menu button -->
+    <div id="mainMenu" onclick="newFunction()"><span> MENU </span></div>
+
+    <!-- Canvas/Game -->
     <canvas id="canvas" width="240" height="400">Sorry, your browser does not support the canvas element!</canvas>
 
     <script>
         function myFunction() {
             menu.style.visibility = 'hidden';
+            scoreList.style.visibility = 'hidden';
         }
         function newFunction() {
             menu.style.visibility = 'visible';
+        }
+        function myScore() {
+            scoreList.style.visibility = 'visible';
+            menu.style.visibility = 'hidden';
         }
     </script>
 
