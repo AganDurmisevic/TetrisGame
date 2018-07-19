@@ -46,7 +46,7 @@ html, body {
 
 #close {
 
-    background: gray;
+    background: darkred;
     font-size: 40px;
     font-weight: bolder;
     font-family: "Nanum Pen Script", "Marker Felt", sans-serif;
@@ -62,7 +62,7 @@ html, body {
 
 #closeList {
 
-    background: gray;
+    background: darkred;
     font-size: 40px;
     font-weight: bolder;
     font-family: "Nanum Pen Script", "Marker Felt", sans-serif;
@@ -80,7 +80,7 @@ html, body {
 
 #tetris {
 
-    background: #2B3D51;
+    background: orangered;
     width: 380px;
     height: 100px;
     padding: 10px;
@@ -95,7 +95,7 @@ html, body {
 
 #highscore {
 
-    background: #2B3D51;
+    background: indianred;
     width: 380px;
     height: 100px;
     padding: 10px;
@@ -110,7 +110,7 @@ html, body {
 
 #versus {
 
-    background: #2B3D51;
+    background: palevioletred;
     width: 380px;
     height: 100px;
     padding: 10px;
@@ -125,7 +125,7 @@ html, body {
 
 #close:hover, #tetris:hover, #highscore:hover, #versus:hover, #closeList:hover {
 
-    background: dimgray;
+    color: #39485E;
     transform: scale(1.1);
     cursor: pointer;
 
@@ -281,7 +281,7 @@ canvas {
 
     position: absolute;;
     height: 240px;
-    width: 240px;
+    width: 200px;
     background: #2B3D51;
     top: 65px;
     left: 65%;
@@ -312,7 +312,7 @@ canvas {
 
 .help {
 
-    visibility: visible;
+    visibility: hidden;
     position: absolute;
     right: 4%;
     top: 60%;

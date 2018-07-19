@@ -13,7 +13,6 @@ function moveDown() {
         merge(arena, player);
         tileReset();
         lineSweep();
-
     }
     drawWorld();
 
