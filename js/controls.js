@@ -32,7 +32,8 @@ var standardmode = function(e) {
         //down
         case DOWN: {
 
-            moveDown();
+            //moveDown();
+            interval = setInterval(moveDown, 100);
             break;
 
         }

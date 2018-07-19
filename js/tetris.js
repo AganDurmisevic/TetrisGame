@@ -29,6 +29,7 @@ function collide(arena, player) {
             if (m[y][x] !== 0 &&
                 (arena[y + o.y] &&
                     arena[y + o.y][x + o.x]) !== 0) {
+                clearInterval(interval);
                 return true;
             }
         }
