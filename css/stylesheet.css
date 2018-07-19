@@ -117,7 +117,7 @@ html, body {
 
 }
 
-#close:hover, #tetris:hover, #highscore:hover, #versus:hover {
+#close:hover, #tetris:hover, #highscore:hover, #versus:hover, #closeList:hover {
 
     background: dimgray;
     transform: scale(1.1);
@@ -205,7 +205,6 @@ canvas {
 
     height: 90vh;
     border: solid .2em #fff;
-    z-index: 5;
 
 }
 
