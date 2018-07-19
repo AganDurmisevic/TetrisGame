@@ -5,6 +5,7 @@ function gameOver () {
         clearInterval(interval);
         document.onkeydown = gameOverMode;
         gameOverAnim.style.visibility = 'visible';
+        addScore();
 
     }
 
