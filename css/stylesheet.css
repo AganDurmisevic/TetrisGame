@@ -141,10 +141,29 @@ html, body {
     padding: 0;
     top: 100px;
     float: left;
-    left: -180px;
+    left: -185px;
     border-radius: 20px;
     font-family: "Nanum Pen Script", "Marker Felt", sans-serif;
     font-size: 44px;
+    vertical-align: center;
+    transition: left 1.5s;
+
+}
+
+#mainHighscore {
+
+    position: absolute;
+    width: 220px;
+    height: 80px;
+    background: indianred;
+    margin: 0;
+    padding: 0;
+    top: 250px;
+    float: left;
+    left: -185px;
+    border-radius: 20px;
+    font-family: "Nanum Pen Script", "Marker Felt", sans-serif;
+    font-size: 40px;
     vertical-align: center;
     transition: left 1.5s;
 
@@ -159,7 +178,16 @@ html, body {
 
 }
 
-#mainMenu:hover {
+#mainHighscore span {
+
+    position: relative;
+    top: 20px;
+    color: white;
+
+
+}
+
+#mainMenu:hover, #mainHighscore:hover {
 
     left: 12px;
     cursor: pointer;
@@ -208,6 +236,17 @@ canvas {
 
 }
 
+#nextTile {
+
+    position: absolute;;
+    height: 250px;
+    width: 250px;
+    background: #2B3D51;
+    top: 65px;
+    left: 65%;
+    border: solid .2em #fff;
+
+}
 @keyframes pause {
 
     25% {
