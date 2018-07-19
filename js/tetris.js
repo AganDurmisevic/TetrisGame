@@ -147,19 +147,17 @@ const nextArena = createMatrix(6, 6);
 function tileReset() {
 
     const tiles = 'OTJSZLI';
-<<<<<<< HEAD
-    nextPlayer.matrix = createTiles(tiles[tiles.length * Math.random() | 0]);
-    player.matrix = createTiles(tiles[tiles.length * Math.random() | 0]);
-=======
+
     var next = (tiles.length * Math.random() | 0);
     var current = (tiles.length * Math.random() | 0);
     console.log(next);
+
     if (tempPlayer !== null) {
         current = tempPlayer;
     }
     nextPlayer.matrix = createTiles(tiles[next]);
     player.matrix = createTiles(tiles[current]);
->>>>>>> 32e80a9663a43ec170609ee8526dae05335c9850
+
     player.pos.y = 0;
     player.pos.x = (arena[0].length / 2 | 0) - (player.matrix[0].length / 2 | 0);
     tempPlayer = next;
@@ -216,8 +214,7 @@ function lineSweep() {
 
     }
 
-<<<<<<< HEAD
+
 }
-=======
-}
->>>>>>> 32e80a9663a43ec170609ee8526dae05335c9850
+
+
