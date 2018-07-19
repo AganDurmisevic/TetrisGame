@@ -11,6 +11,7 @@ function moveDown() {
         document.getElementById( 'score' ).innerHTML = "SCORE: " + score;
         merge(arena, player);
         tileReset();
+        lineSweep();
 
     }
 
