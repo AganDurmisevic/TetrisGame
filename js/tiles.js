@@ -35,8 +35,8 @@ function createTiles(tiles) {
 
         return [
 
-            [4, 4],
-            [4, 4],
+            [ 4, 4 ],
+            [ 4, 4 ],
 
         ];
 

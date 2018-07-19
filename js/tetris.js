@@ -1,7 +1,10 @@
 const canvas = document.getElementById('canvas');
 const context = canvas.getContext('2d');
+const smallCanvas = document.getElementById('nextTile');
+const smallContext = smallCanvas.getContext('2d');
 
 context.scale(20, 20);
+smallContext.scale(77, 35);
 
 context.fillStyle = '#2B3D51';
 context.fillRect(0, 0, canvas.width, canvas.height);
@@ -32,6 +35,27 @@ function collide(arena, player) {
     return false;
 }
 
+function newTile(matrix) {
+
+    smallContext.fillStyle = '#2B3D51';
+    smallContext.fillRect ( 0, 0, smallCanvas.width, smallCanvas.height );
+
+    nextPlayer.pos.y = (smallContext.length / 2 | 0) - (nextPlayer.matrix[0].length / 2 | 0);
+    nextPlayer.pos.x = (smallContext.length / 2 | 0) - (nextPlayer.matrix[0].length / 2 | 0);
+
+    matrix.forEach((row, y) => {
+        row.forEach((value, x) => {
+            if(value !== 0) {
+                smallContext.fillStyle = colors[value];
+                smallContext.fillRect(x, y, 1, 1);
+                smallContext.clearRect(x + 0.05, y + 0.05, 0.9, 0.9);
+                smallContext.fillRect(x + 0.05, y + 0.05, 0.8, 0.8);
+            }
+        });
+    });
+
+}
+
 function drawWorld() {
 
     if(!(collide(arena, player))) {
@@ -41,6 +65,8 @@ function drawWorld() {
 
         drawMatrix ( arena, { x: 0, y: 0 } );
         drawMatrix ( player.matrix, player.pos );
+
+        newTile ( nextPlayer.matrix );
 
     }
 
@@ -65,6 +91,20 @@ const offset = {
     x: 4,
     y: 0,
 }
+
+const nextPlayer = {
+
+    pos: {
+
+        x: 0,
+        y: 0,
+
+    },
+
+    matrix: null,
+
+};
+
 
 
 function drawMatrix(matrix, offset) {
@@ -101,13 +141,16 @@ function createMatrix(h, w) {
 }
 
 const arena = createMatrix(20, 12);
+const nextArena = createMatrix(6, 6);
 
 function tileReset() {
 
     const tiles = 'OTJSZLI';
     player.matrix = createTiles(tiles[tiles.length * Math.random() | 0]);
+    nextPlayer.matrix = player.matrix;
     player.pos.y = 0;
     player.pos.x = (arena[0].length / 2 | 0) - (player.matrix[0].length / 2 | 0);
+
 
     gameOver();
 
