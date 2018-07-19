@@ -2,6 +2,7 @@ const canvas = document.getElementById('canvas');
 const context = canvas.getContext('2d');
 const smallCanvas = document.getElementById('nextTile');
 const smallContext = smallCanvas.getContext('2d');
+var tempPlayer = null;
 
 context.scale(20, 20);
 smallContext.scale(77, 35);
@@ -114,14 +115,14 @@ function drawMatrix(matrix, offset) {
             if(value !== 0) {
                 context.fillStyle = colors[value];
                 context.fillRect(x + offset.x,
-                                 y + offset.y,
-                                        1, 1);
+                    y + offset.y,
+                    1, 1);
                 context.clearRect(x + offset.x + 0.05,
-                                 y + offset.y + 0.05,
-                                        0.9, 0.9);
+                    y + offset.y + 0.05,
+                    0.9, 0.9);
                 context.fillRect(x + offset.x + 0.05,
-                                 y + offset.y + 0.05,
-                                        0.8, 0.8);
+                    y + offset.y + 0.05,
+                    0.8, 0.8);
             }
         });
     });
@@ -146,10 +147,17 @@ const nextArena = createMatrix(6, 6);
 function tileReset() {
 
     const tiles = 'OTJSZLI';
-    player.matrix = createTiles(tiles[tiles.length * Math.random() | 0]);
-    nextPlayer.matrix = player.matrix;
+    var next = (tiles.length * Math.random() | 0);
+    var current = (tiles.length * Math.random() | 0);
+    console.log(next);
+    if (tempPlayer !== null) {
+        current = tempPlayer;
+    }
+    nextPlayer.matrix = createTiles(tiles[next]);
+    player.matrix = createTiles(tiles[current]);
     player.pos.y = 0;
     player.pos.x = (arena[0].length / 2 | 0) - (player.matrix[0].length / 2 | 0);
+    tempPlayer = next;
 
 
     gameOver();
@@ -204,4 +212,3 @@ function lineSweep() {
     }
 
 }
-
