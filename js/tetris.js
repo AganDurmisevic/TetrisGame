@@ -112,3 +112,7 @@ function merge(arena, player) {
     });
 }
 
+function lineSweep() {
+
+}
+
