@@ -3,7 +3,7 @@ var sound = new Howl ({
 
     src: ['audio/Tetris.mp3'],
     preload: true,
-    volume: 0.5,
+    volume: 0.1,
     autoplay: false,
     onplay: function() {
 
@@ -13,4 +13,45 @@ var sound = new Howl ({
 
 });
 
-sound.play();
+var paused = new Howl ({
+
+    src: ['audio/paused.mp3'],
+    preload: true,
+    volume: 0.5,
+    autoplay: false,
+    onplay: function() {
+
+        console.log( 'Paused' );
+
+    }
+
+});
+
+var full = new Howl ({
+
+    src: ['audio/full.mp3'],
+    preload: true,
+    volume: 0.5,
+    autoplay: false,
+    onplay: function() {
+
+        console.log( 'Sweep' );
+
+    }
+
+});
+
+var move = new Howl ({
+
+    src: ['audio/move.mp3'],
+    preload: true,
+    volume: 0.5,
+    autoplay: false,
+    onplay: function() {
+
+        console.log( 'Moved' );
+
+    }
+
+});
+

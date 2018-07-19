@@ -82,45 +82,66 @@ function drawMatrix(matrix, offset) {
 }
 
 function createMatrix(h, w) {
+
     const matrix = [];
     while(h--) {
+
         matrix.push(new Array(w).fill(0));
+
     }
+
     return matrix;
+
 }
 
 const arena = createMatrix(20, 12);
 
 function tileReset() {
+
     const tiles = 'OTJSZLI';
     player.matrix = createTiles(tiles[tiles.length * Math.random() | 0]);
     player.pos.y = 0;
-    player.pos.x = (arena[0].length / 2 | 0) -
-                   (player.matrix[0].length / 2 | 0);
+    player.pos.x = (arena[0].length / 2 | 0) - (player.matrix[0].length / 2 | 0);
 
     gameOver();
 
 }
 
 function merge(arena, player) {
+
     player.matrix.forEach((row, y) => {
+
         row.forEach((value, x) => {
+
             if (value !== 0) {
+
                 arena[y + player.pos.y][x + player.pos.x] = value;
+
             }
+
         });
+
     });
+
 }
 
 function lineSweep() {
+
     for (let y = arena.length - 1; y > 0; y --) {
+
         var counter = 0;
         for (let x = 0; x < arena[y].length; x++) {
+
             if(arena[y][x] === 0) {
                 counter += 1;
+
             }
+
         }
+
         if (counter === 0) {
+
+            full.play();
             const row = arena.splice(y, 1)[0].fill(0);
             arena.unshift(row);
             drawWorld();
@@ -128,7 +149,10 @@ function lineSweep() {
             y ++;
             score += 100;
             document.getElementById('score').innerHTML = "SCORE: " + score;
+
         }
+
     }
+
 }
 

@@ -9,6 +9,7 @@ const ENTER = 13;
 
 var startmode = function(e) {
 
+    sound.play();
     switch (e.keyCode) {
 
         case START : {
@@ -69,6 +70,8 @@ var standardmode = function(e) {
         }
 
         case PAUSE: {
+            paused.play();
+            sound.stop();
             clearInterval(interval);
             document.onkeydown = breakmode;
             pause.style.visibility = 'visible';
@@ -84,7 +87,8 @@ var breakmode = function(e) {
     switch (e.keyCode) {
 
         case START: {
-
+            paused.stop();
+            sound.play();
             interval = setInterval(moveDown, 1000);
             document.onkeydown = standardmode;
             pause.style.visibility = 'hidden';
