@@ -1,6 +1,7 @@
 var scorelist = JSON.parse(localStorage.getItem("scorelist")) || [];
 
 function drawHighscorelist() {
+    document.getElementById('highscorelist').innerHTML = "";
     scorelist.sort(function(a, b){return a-b});
     scorelist.reverse();
     longerThanFive();
