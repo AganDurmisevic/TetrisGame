@@ -75,6 +75,7 @@ var standardmode = function(e) {
             clearInterval(interval);
             document.onkeydown = breakmode;
             pause.style.visibility = 'visible';
+            iframe.style.visibility = 'visible';
             break;
         }
 
@@ -92,6 +93,7 @@ var breakmode = function(e) {
             interval = setInterval(moveDown, 1000);
             document.onkeydown = standardmode;
             pause.style.visibility = 'hidden';
+            iframe.style.visibility = 'hidden';
             break;
 
         }

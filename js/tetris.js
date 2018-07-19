@@ -114,14 +114,14 @@ function drawMatrix(matrix, offset) {
             if(value !== 0) {
                 context.fillStyle = colors[value];
                 context.fillRect(x + offset.x,
-                                 y + offset.y,
-                                        1, 1);
+                    y + offset.y,
+                    1, 1);
                 context.clearRect(x + offset.x + 0.05,
-                                 y + offset.y + 0.05,
-                                        0.9, 0.9);
+                    y + offset.y + 0.05,
+                    0.9, 0.9);
                 context.fillRect(x + offset.x + 0.05,
-                                 y + offset.y + 0.05,
-                                        0.8, 0.8);
+                    y + offset.y + 0.05,
+                    0.8, 0.8);
             }
         });
     });
@@ -146,8 +146,8 @@ const nextArena = createMatrix(6, 6);
 function tileReset() {
 
     const tiles = 'OTJSZLI';
+    nextPlayer.matrix = createTiles(tiles[tiles.length * Math.random() | 0]);
     player.matrix = createTiles(tiles[tiles.length * Math.random() | 0]);
-    nextPlayer.matrix = player.matrix;
     player.pos.y = 0;
     player.pos.x = (arena[0].length / 2 | 0) - (player.matrix[0].length / 2 | 0);
 
@@ -204,4 +204,3 @@ function lineSweep() {
     }
 
 }
-

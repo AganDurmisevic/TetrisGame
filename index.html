@@ -11,6 +11,9 @@
 
 </head>
 <body>
+
+    <iframe id="iframe" src="https://giphy.com/embed/20k1punZ5bpmM" width="730" height="387" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+
     <!-- Menu -->
     <div id="menu" class="activ">
         <!-- Buttons -->
@@ -32,11 +35,17 @@
     <!-- Menu buttons -->
     <div id="mainMenu" onclick="newFunction()"><span> MENU </span></div>
     <div id="mainHighscore" onclick="myScore()"><span> HIGHSCORE </span></div>
+    <div id="mainControlls" onclick="visible()"><span> CONTROLLS </span></div>
 
     <!-- Canvas/Game -->
     <canvas id="canvas" width="240" height="400">Sorry, your browser does not support the canvas element!</canvas>
     <canvas id="nextTile"></canvas>
 
+    <div class="help" id="hidden" onclick="hidde()">
+        <span class="fade close" id="close-help">Hidde this <- </span>
+        <p style="width:75%;margin-bottom:30px;">Help.....<br> You can do...</p>
+        <img src="img/toz89pW.png">
+    </div>
     <script>
         function myFunction() {
             menu.style.visibility = 'hidden';
@@ -49,6 +58,12 @@
             drawHighscorelist();
             scoreList.style.visibility = 'visible';
             menu.style.visibility = 'hidden';
+        }
+        function hidde() {
+                hidden.style.visibility = 'hidden';
+        }
+        function visible() {
+                hidden.style.visibility = 'visible';
         }
     </script>
 
