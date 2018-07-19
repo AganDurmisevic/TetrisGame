@@ -21,7 +21,7 @@
     </div>
 
     <!-- Highscorelist -->
-    <div id="scoreList"><h1>HIGHSCORE</h1><div id="closeList" onclick="myFunction()"> X </div></div>
+    <div id="scoreList"><h1>HIGHSCORE</h1><div id="closeList" onclick="myFunction()"> X </div><h2 style="color:white; text-align:center; font-size: 23px; padding-top: 100px" id='highscorelist'></h2></div>
 
     <!-- Text -->
     <div id="pause" class="activ">PAUSED</div>
@@ -44,12 +44,14 @@
             menu.style.visibility = 'visible';
         }
         function myScore() {
+            drawHighscorelist();
             scoreList.style.visibility = 'visible';
             menu.style.visibility = 'hidden';
         }
     </script>
 
     <!-- JavaScript -->
+    <script type="text/javascript" src="js/scoreList.js"></script>
     <script type="text/javascript" src="js/tiles.js"></script>
     <script type="text/javascript" src="js/tetris.js"></script>
     <script type="text/javascript" src="js/rotateClockwise.js"></script>
