@@ -127,6 +127,7 @@ function lineSweep() {
             console.log(counter);
             y ++;
             score += 100;
+            document.getElementById('score').innerHTML = "SCORE: " + score;
         }
     }
 }
