@@ -1,7 +1,7 @@
+//The function checks if the player has lost (if true - changes to GameOver mode)
 function gameOver (player) {
 
     if(collide(arena, player1)) {
-
 
         clearInterval(interval);
         document.onkeydown = gameOverMode;

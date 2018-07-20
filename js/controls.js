@@ -15,13 +15,13 @@ const DOWN_S = 83;
 const ROTATE_LM = 75;
 const ROTATE_RS = 76;
 
+//Startmode for the beginning and only ENTER is expected
 var startmode = function(e) {
 
     sound.play();
     switch (e.keyCode) {
 
         case START : {
-
 
             start.style.visibility = 'hidden';
             tileReset(player1);
@@ -35,6 +35,7 @@ var startmode = function(e) {
 
 }
 
+//Stanadardmode - Movementmode and main listener
 var standardmode = function(e) {
     switch(e.keyCode) {
 
@@ -42,6 +43,7 @@ var standardmode = function(e) {
         case DOWN: {
 
             modifySpeed();
+            moveDown(player1);
             break;
 
         }
@@ -78,6 +80,7 @@ var standardmode = function(e) {
 
         }
 
+        //player2 right
         case RIGHT_D: {
 
             moveRight(player2);
@@ -85,6 +88,7 @@ var standardmode = function(e) {
 
         }
 
+        //player2 left
         case LEFT_A: {
 
             moveLeft(player2);
@@ -92,6 +96,7 @@ var standardmode = function(e) {
 
         }
 
+        //player2 down
         case DOWN_S: {
 
             moveDown(player2);
@@ -99,6 +104,7 @@ var standardmode = function(e) {
 
         }
 
+        //player2 rotate clockwise
         case ROTATE_L: {
 
             rotateClockwise(player2.matrix);
@@ -106,6 +112,7 @@ var standardmode = function(e) {
 
         }
 
+        //player2 rotate counterclockwise
         case ROTATE_R: {
 
             rotateCounterClockwise(player2.matrix);
@@ -113,6 +120,7 @@ var standardmode = function(e) {
 
         }
 
+        //change to breakmode
         case PAUSE: {
             paused.play();
             sound.stop();
@@ -127,6 +135,8 @@ var standardmode = function(e) {
 
 }
 
+//breakmode for paused game
+//only ENTER is expected
 var breakmode = function(e) {
 
     switch (e.keyCode) {
@@ -146,6 +156,8 @@ var breakmode = function(e) {
 
 }
 
+//GameOver mode if player has lost
+//only ENTER is expected
 var gameOverMode = function(e) {
 
     switch (e.keyCode) {
@@ -164,6 +176,7 @@ var gameOverMode = function(e) {
 
 }
 
+//standardmode
 document.onkeydown = startmode;
 document.getElementById('score').innerHTML = "SCORE" + " " + " : ";
 start.style.visibility = 'visible';

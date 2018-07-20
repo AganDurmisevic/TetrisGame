@@ -1,3 +1,4 @@
+//The function moves the tiles left
 function moveLeft(player) {
 
     player.pos.x -= 1;
