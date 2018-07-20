@@ -1,10 +1,20 @@
 var score = 0;
 
+<<<<<<< HEAD
 function moveDown(arena1, player1) {
 
     player1.pos.y += 1;
 
     if (collide(arena1, player1)) {
+=======
+//The function moves the tiles down
+function moveDown(player) {
+
+    player1.pos.y += 1;
+
+    //Check if arena and player collide
+    if (collide(arena, player)) {
+>>>>>>> 19472b4e4c894f0c8ec0fefdc1753f86488bf7b2
 
         move.play();
         player1.pos.y -= 1;

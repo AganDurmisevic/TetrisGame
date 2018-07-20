@@ -1,3 +1,4 @@
+//the function records the highscore
 var scorelist = JSON.parse(localStorage.getItem("scorelist")) || [];
 
 function drawHighscorelist() {
@@ -12,12 +13,14 @@ function drawHighscorelist() {
     }
 }
 
+//The function reduces the list to five best
 function longerThanFive() {
     while(scorelist.length > 5) {
         scorelist.pop();
     }
 }
 
+//the function write highscore
 function addScore() {
     scorelist.push(score);
     localStorage.setItem("scorelist", JSON.stringify(scorelist));

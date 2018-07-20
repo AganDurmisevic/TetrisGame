@@ -1,0 +1,37 @@
+var check = 1000;
+var speed = 1000;
+
+function modifySpeed() {
+
+    if ( score < check ) {
+
+        if ( typeof interval !== "undefined" ) {
+
+            clearInterval ( interval );
+            //console.log(timer);
+        }
+        interval = setInterval ( function () {
+            moveDown ( player1 );
+        }, speed );
+
+    } else {
+
+        check += 1000;
+
+        if ( speed > 500 ) {
+            speed -= 100;
+        } else if ( speed > 200 ) {
+            speed -= 50;
+        } else if ( speed > 100 ) {
+            speed -= 5;
+        }
+
+        if ( speed <= 30 ) {
+            document.getElementById ( 'gameOverAnim' ).innerHTML = "YOU WON!";
+            clearInterval ( interval );
+            gameOverAnim.style.visibility = 'visible';
+        }
+
+    }
+
+}
