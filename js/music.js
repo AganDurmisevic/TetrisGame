@@ -47,6 +47,7 @@ var move = new Howl ({
     preload: true,
     volume: 0.5,
     autoplay: false,
+    loop: false,
     onplay: function() {
 
         console.log( 'Moved' );

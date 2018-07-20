@@ -15,6 +15,8 @@ const DOWN_S = 83;
 const ROTATE_LM = 75;
 const ROTATE_RS = 76;
 
+var interval = 0;
+
 //Startmode for the beginning and only ENTER is expected
 var startmode = function(e) {
 
@@ -22,7 +24,7 @@ var startmode = function(e) {
     switch (e.keyCode) {
 
         case START : {
-            var interval = setInterval(function() {
+            interval = setInterval(function() {
                                 moveDown(arena1, player1);
             }, 1000);
             start.style.visibility = 'hidden';
