@@ -180,27 +180,6 @@ html, body {
 
 }
 
-#mainControlls {
-
-    position: absolute;
-    width: 240px;
-    height: 80px;
-    background: indianred;
-    margin: 0;
-    padding: 0;
-    top: 400px;
-    float: left;
-    left: -190px;
-    border-top-right-radius:    20px 14px;
-    border-bottom-right-radius: 20px 14px;
-    font-family: "Nanum Pen Script", "Marker Felt", sans-serif;
-    font-size: 36px;
-    vertical-align: center;
-    box-shadow: 4px 4px 3px #000;
-    transition: left 1.5s;
-
-}
-
 #mainMenu span {
 
     position: relative;
@@ -219,17 +198,7 @@ html, body {
 
 }
 
-#mainControlls span {
-
-    position: relative;
-    top: 20px;
-    color: white;
-    horiz-align: center;
-
-
-}
-
-#mainMenu:hover, #mainHighscore:hover, #mainControlls:hover {
+#mainMenu:hover, #mainHighscore:hover {
 
     left: -10px;
     cursor: pointer;
@@ -238,13 +207,23 @@ html, body {
 
 }
 
+#scoreTwo {
+
+    position: fixed;
+    color: #DFDEFB;
+    font-size: 35px;
+    top: 5%;
+    right: 10%;
+
+}
+
 #score {
 
     position: fixed;
     color: #DFDEFB;
     font-size: 35px;
-    margin-left: 10px;
-    top: 1%;
+    top: 5%;
+    left: 10%;
 
 }
 
@@ -273,8 +252,15 @@ h1 {
 
 canvas {
 
+    margin: 50px;
+
+}
+
+#canvas, #canvasTwo {
+
     height: 90vh;
     border: solid .2em #fff;
+
 
 }
 
@@ -287,53 +273,13 @@ a {
 
 #nextTile {
 
-    position: absolute;;
+    margin-top: -27.4%;
     height: 240px;
-    width: 200px;
+    width: 240px;
     background: #2B3D51;
-    top: 65px;
+    top: 0;
     left: 65%;
     border: solid .2em #fff;
-
-}
-
-#iframe {
-
-    height: 90vh;
-    position: absolute;
-    left: 39.4%;
-    visibility: hidden;
-
-}
-
-#iframeCry {
-
-    background-size: 600%;
-    height: 120%;
-    width: 400%;
-    position: absolute;
-    left: -150%;
-    z-index: 20;
-    visibility: hidden;
-
-}
-
-.help {
-
-    visibility: hidden;
-    position: absolute;
-    right: 4%;
-    top: 60%;
-    color: orangered;
-
-}
-
-#close-help {
-
-    float: right;
-    font-family: "Nanum Pen Script", "Marker Felt", sans-serif;
-    font-size: 30px;
-    cursor: pointer;
 
 }
 

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Tetris 1vs1</title>
+
+    <!-- Style CSS -->
+    <link type="text/css" rel="stylesheet" href="css/multiplayer.css">
+    <script type="text/javascript" src="js/howler.min.js"></script>
+    <script type="text/javascript" src="js/music.js"></script>
+
+</head>
+<body>
+<!-- Menu -->
+<div id="menu" class="activ">
+    <!-- Buttons -->
+    <div id="close" onclick="myFunction()"> X </div>
+    <div id="tetris" onclick="myFunction()"> Start </div>
+    <div id="highscore" onclick="myScore()"> Highscore </div>
+    <div id="versus"><a href="index.html"> Singleplayer </a></div>
+</div>
+
+<!-- Highscorelist -->
+<div id="scoreList"><h1>HIGHSCORE</h1><div id="closeList" onclick="myFunction()"> X </div><h2 style="color:white; text-align:center; font-size: 23px; padding-top: 100px" id='highscorelist'></h2></div>
+
+<!-- Text -->
+<div id="pause" class="activ">PAUSED</div>
+<div id="start" class="activ">PRESS SPACE TO START</div>
+<div id="gameOverAnim" class="activ">GAME OVER</div>
+<div id="score">SCORE: </div>
+<div id="scoreTwo">SCORE: </div>
+
+<!-- Menu buttons -->
+<div id="mainMenu" onclick="newFunction()"><span> MENU </span></div>
+<div id="mainHighscore" onclick="myScore()"><span> HIGHSCORE </span></div>
+
+<!-- Canvas/Game -->
+<canvas id="canvas" width="240" height="400">Sorry, your browser does not support the canvas element!</canvas>
+<canvas id="nextTile"></canvas>
+<canvas id="canvasTwo" width="240" height="400">Sorry, your browser does not support the canvas element!</canvas>
+
+<script>
+    function myFunction() {
+        menu.style.visibility = 'hidden';
+        scoreList.style.visibility = 'hidden';
+    }
+    function newFunction() {
+        menu.style.visibility = 'visible';
+    }
+    function myScore() {
+        drawHighscorelist();
+        scoreList.style.visibility = 'visible';
+        menu.style.visibility = 'hidden';
+    }
+    function visible() {
+        hidden.style.visibility = 'visible';
+    }
+</script>
+
+<!-- JavaScript -->
+<script type="text/javascript" src="js/scoreList.js"></script>
+<script type="text/javascript" src="js/tiles.js"></script>
+<script type="text/javascript" src="js/tetris.js"></script>
+<script type="text/javascript" src="js/rotateClockwise.js"></script>
+<script type="text/javascript" src="js/rotateCounterClockwise.js"></script>
+<script type="text/javascript" src="js/moveRight.js"></script>
+<script type="text/javascript" src="js/moveDown.js"></script>
+<script type="text/javascript" src="js/moveLeft.js"></script>
+<script type="text/javascript" src="js/controls.js"></script>
+<script type="text/javascript" src="js/gameOver.js"></script>
+<script type="text/javascript" src="js/drawTile.js"></script>
+
+
+</body>
+</html>
