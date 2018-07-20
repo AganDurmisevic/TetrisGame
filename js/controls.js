@@ -22,14 +22,10 @@ var startmode = function(e) {
     switch (e.keyCode) {
 
         case START : {
-<<<<<<< HEAD
-            interval = setInterval(function() {
+            var interval = setInterval(function() {
                                 moveDown(arena1, player1);
                                 moveDown2(arena2, player2);
             }, 1000);
-=======
-
->>>>>>> 19472b4e4c894f0c8ec0fefdc1753f86488bf7b2
             start.style.visibility = 'hidden';
             tileReset();
             tileReset2();
@@ -51,12 +47,7 @@ var standardmode = function(e) {
         //down
         case DOWN: {
 
-<<<<<<< HEAD
             moveDown(arena1, player1);
-=======
-            modifySpeed();
-            moveDown(player1);
->>>>>>> 19472b4e4c894f0c8ec0fefdc1753f86488bf7b2
             break;
 
         }
@@ -157,7 +148,6 @@ var breakmode = function(e) {
         case START: {
             paused.stop();
             sound.play();
-            modifySpeed();
             document.onkeydown = standardmode;
             pause.style.visibility = 'hidden';
             iframe.style.visibility = 'hidden';
@@ -192,4 +182,5 @@ var gameOverMode = function(e) {
 //standardmode
 document.onkeydown = startmode;
 document.getElementById('score').innerHTML = "SCORE" + " " + " : ";
+document.getElementById('scoreTwo').innerHTML = "SCORE" + " " + " : ";
 start.style.visibility = 'visible';
