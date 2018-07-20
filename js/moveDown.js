@@ -8,7 +8,7 @@ function moveDown(player) {
 
         move.play();
         player1.pos.y -= 1;
-        score += 10;
+        score += 1000;
         document.getElementById( 'score' ).innerHTML = "SCORE: " + score;
         merge(arena, player);
         tileReset(player);
