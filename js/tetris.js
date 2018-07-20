@@ -150,7 +150,7 @@ function createMatrix(h, w) {
 const arena = createMatrix(20, 12);
 const nextArena = createMatrix(6, 6);
 
-function tileReset() {
+function tileReset(player) {
 
     const tiles = 'OTJSZLI';
 

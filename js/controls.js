@@ -21,7 +21,9 @@ var startmode = function(e) {
     switch (e.keyCode) {
 
         case START : {
-            interval = setInterval(moveDown, 1000);
+            interval = setInterval(function() {
+                                moveDown(player1);
+            }, 1000);
             start.style.visibility = 'hidden';
             tileReset(player1);
             drawWorld(player1);
