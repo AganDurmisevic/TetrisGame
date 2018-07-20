@@ -4,6 +4,8 @@ function moveRight(arena, player) {
     if (collide(arena, player)) {
         player.pos.x -= 1;
     }
+
     drawWorld();
     drawWorld2();
 }
+
