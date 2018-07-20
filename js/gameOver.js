@@ -1,17 +1,17 @@
-function gameOver (player) {
+function gameOver (arena, player) {
 
-    if(collide(arena, player1)) {
+    if(collide(arena, player)) {
 
 
         clearInterval(interval);
         document.onkeydown = gameOverMode;
-        iframeCry.style.visibility = 'visible';
-        gameOverAnim.style.visibility = 'visible';
+        //iframeCry.style.visibility = 'visible';
+        //gameOverAnim.style.visibility = 'visible';
         addScore();
 
-        setTimeout(function() {
+        /*setTimeout(function() {
             iframeCry.style.visibility = 'hidden';
-        }, 3000);
+        }, 3000);*/
 
     }
 

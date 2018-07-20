@@ -22,11 +22,14 @@ var startmode = function(e) {
 
         case START : {
             interval = setInterval(function() {
-                                moveDown(player1);
+                                moveDown(arena1, player1);
+                                moveDown2(arena2, player2);
             }, 1000);
             start.style.visibility = 'hidden';
-            tileReset(player1);
-            drawWorld(player1);
+            tileReset();
+            tileReset2();
+            drawWorld();
+            drawWorld2();
             document.onkeydown = standardmode;
             break;
 
@@ -42,7 +45,7 @@ var standardmode = function(e) {
         //down
         case DOWN: {
 
-            moveDown(player1);
+            moveDown(arena1, player1);
             break;
 
         }
@@ -50,7 +53,7 @@ var standardmode = function(e) {
         //left
         case LEFT: {
 
-            moveLeft(player1);
+            moveLeft(arena1, player1);
             break;
 
         }
@@ -58,7 +61,7 @@ var standardmode = function(e) {
         //right
         case RIGHT: {
 
-            moveRight(player1);
+            moveRight(arena1, player1);
             break;
 
         }
@@ -81,21 +84,21 @@ var standardmode = function(e) {
 
         case RIGHT_D: {
 
-            moveRight(player2);
+            moveRight(arena2, player2);
             break;
 
         }
 
         case LEFT_A: {
 
-            moveLeft(player2);
+            moveLeft(arena2, player2);
             break;
 
         }
 
         case DOWN_S: {
 
-            moveDown(player2);
+            moveDown2(arena2, player2);
             break;
 
         }

@@ -1,9 +1,10 @@
-function moveLeft(player) {
+function moveLeft(arena, player) {
 
     player.pos.x -= 1;
 
-    if (collide(arena, player1)) {
+    if (collide(arena, player)) {
         player.pos.x += 1;
     }
-    drawWorld(player);
+    drawWorld();
+    drawWorld2();
 }
