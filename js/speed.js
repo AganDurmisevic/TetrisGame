@@ -10,8 +10,10 @@ function modifySpeed() {
             clearInterval ( interval );
             //console.log(timer);
         }
+        clearInterval ( interval );
         interval = setInterval ( function () {
-            moveDown ( player1 );
+            moveDown (arena1, player1);
+            moveDown (arena2, player2);
         }, speed );
 
     } else {

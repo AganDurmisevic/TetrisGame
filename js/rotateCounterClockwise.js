@@ -12,5 +12,6 @@ function rotateCounterClockwise(matrix) {
         }
     }
     matrix.reverse();
-    drawWorld(player1);
+    drawWorld();
+    drawWorld2();
 }

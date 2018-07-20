@@ -1,10 +1,11 @@
+function moveLeft(arena, player) {
 //The function moves the tiles left
-function moveLeft(player) {
 
     player.pos.x -= 1;
 
-    if (collide(arena, player1)) {
+    if (collide(arena, player)) {
         player.pos.x += 1;
     }
-    drawWorld(player);
+    drawWorld();
+    drawWorld2();
 }
