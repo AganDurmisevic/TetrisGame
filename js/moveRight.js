@@ -6,3 +6,4 @@ function moveRight(player) {
     }
     drawWorld(player1);
 }
+
