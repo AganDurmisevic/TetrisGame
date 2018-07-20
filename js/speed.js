@@ -18,15 +18,15 @@ function modifySpeed() {
 
         check += 1000;
 
-        if ( speed > 200 ) {
-            speed -= 200;
-        } else if ( speed > 60 ) {
-            speed -= 10;
-        } else if ( speed > 20 ) {
+        if ( speed > 500 ) {
+            speed -= 100;
+        } else if ( speed > 200 ) {
+            speed -= 50;
+        } else if ( speed > 100 ) {
             speed -= 5;
         }
 
-        if ( speed <= 0 ) {
+        if ( speed <= 30 ) {
             document.getElementById ( 'gameOverAnim' ).innerHTML = "YOU WON!";
             clearInterval ( interval );
             gameOverAnim.style.visibility = 'visible';
