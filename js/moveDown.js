@@ -1,19 +1,19 @@
 var score = 0;
 
-function moveDown() {
+function moveDown(player) {
 
-    player.pos.y += 1;
+    player1.pos.y += 1;
 
-    if (collide(arena, player)) {
+    if (collide(arena, player1)) {
 
         move.play();
-        player.pos.y -= 1;
+        player1.pos.y -= 1;
         score += 10;
         document.getElementById( 'score' ).innerHTML = "SCORE: " + score;
         merge(arena, player);
         tileReset();
         lineSweep();
     }
-    drawWorld();
+    drawWorld(player1);
 
 }

@@ -55,9 +55,9 @@ function newTile(matrix) {
 
 }
 
-function drawWorld() {
+function drawWorld(player) {
 
-    if(!(collide(arena, player))) {
+    if(!(collide(arena, player1))) {
 
         context.fillStyle = '#2B3D51';
         context.fillRect ( 0, 0, canvas.width, canvas.height );
@@ -78,7 +78,15 @@ function drawWorld() {
 
 }
 
-const player = {
+const player1 = {
+    pos: {
+        x: 0,
+        y: 0,
+    },
+    matrix: null,
+};
+
+const player2 = {
     pos: {
         x: 0,
         y: 0,
@@ -202,7 +210,7 @@ function lineSweep() {
             full.play();
             const row = arena.splice(y, 1)[0].fill(0);
             arena.unshift(row);
-            drawWorld();
+            drawWorld(player1);
             console.log(counter);
             y ++;
             score += 100;

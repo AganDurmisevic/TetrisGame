@@ -1,11 +1,19 @@
-const DOWN = 40;
+const ENTER = 13;
+const START = 32;
+
 const LEFT = 37;
 const RIGHT = 39;
+const DOWN = 40;
 const ROTATE_L = 69;
 const ROTATE_R = 81;
 const PAUSE = 80;
-const START = 32;
-const ENTER = 13;
+
+const LEFT_A = 65;
+const RIGHT_D = 68;
+const DOWN_S = 83;
+
+const ROTATE_LM = 189;
+const ROTATE_RS = 16;
 
 var startmode = function(e) {
 
@@ -15,8 +23,8 @@ var startmode = function(e) {
         case START : {
             interval = setInterval(moveDown, 1000);
             start.style.visibility = 'hidden';
-            tileReset();
-            drawWorld();
+            tileReset(player1);
+            drawWorld(player1);
             document.onkeydown = standardmode;
             break;
 
@@ -32,7 +40,7 @@ var standardmode = function(e) {
         //down
         case DOWN: {
 
-            moveDown();
+            moveDown(player1);
             break;
 
         }
@@ -40,7 +48,7 @@ var standardmode = function(e) {
         //left
         case LEFT: {
 
-            moveLeft();
+            moveLeft(player1);
             break;
 
         }
@@ -48,23 +56,58 @@ var standardmode = function(e) {
         //right
         case RIGHT: {
 
-            moveRight();
+            moveRight(player1);
             break;
 
         }
 
         //rotate clockwise
-        case ROTATE_L: {
+        case ROTATE_LM: {
 
-            rotateClockwise(player.matrix);
+            rotateClockwise(player1.matrix);
             break;
 
         }
 
         //rotate counterclockwise
+        case ROTATE_RS: {
+
+            rotateCounterClockwise(player1.matrix);
+            break;
+
+        }
+
+        case RIGHT_D: {
+
+            moveRight(player2);
+            break;
+
+        }
+
+        case LEFT_A: {
+
+            moveLeft(player2);
+            break;
+
+        }
+
+        case DOWN_S: {
+
+            moveDown(player2);
+            break;
+
+        }
+
+        case ROTATE_L: {
+
+            rotateClockwise(player2.matrix);
+            break;
+
+        }
+
         case ROTATE_R: {
 
-            rotateCounterClockwise(player.matrix);
+            rotateCounterClockwise(player2.matrix);
             break;
 
         }

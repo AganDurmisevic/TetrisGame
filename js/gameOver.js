@@ -1,6 +1,6 @@
-function gameOver () {
+function gameOver (player) {
 
-    if(collide(arena, player)) {
+    if(collide(arena, player1)) {
 
 
         clearInterval(interval);

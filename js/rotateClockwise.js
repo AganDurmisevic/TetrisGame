@@ -11,5 +11,5 @@ function rotateClockwise(matrix) {
         }
     }
     matrix.forEach(row => row.reverse());
-    drawWorld();
+    drawWorld(player1);
 }
