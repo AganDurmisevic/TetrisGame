@@ -23,11 +23,14 @@ var startmode = function(e) {
 
         case START : {
             var interval = setInterval(function() {
-                                moveDown(arena1, player1);
+                moveDown(arena1, player1);
+                moveDown2(arena2, player2);
             }, 1000);
             start.style.visibility = 'hidden';
             tileReset();
+            tileReset2();
             drawWorld();
+            drawWorld2();
             document.onkeydown = standardmode;
             break;
 
@@ -77,6 +80,46 @@ var standardmode = function(e) {
         case ROTATE_RS: {
 
             rotateCounterClockwise(player1.matrix);
+            break;
+
+        }
+
+        //player2 right
+        case RIGHT_D: {
+
+            moveRight(arena2, player2);
+            break;
+
+        }
+
+        //player2 left
+        case LEFT_A: {
+
+            moveLeft(arena2, player2);
+            break;
+
+        }
+
+        //player2 down
+        case DOWN_S: {
+
+            moveDown2(arena2, player2);
+            break;
+
+        }
+
+        //player2 rotate clockwise
+        case ROTATE_L: {
+
+            rotateClockwise(player2.matrix);
+            break;
+
+        }
+
+        //player2 rotate counterclockwise
+        case ROTATE_R: {
+
+            rotateCounterClockwise(player2.matrix);
             break;
 
         }
@@ -139,4 +182,5 @@ var gameOverMode = function(e) {
 //standardmode
 document.onkeydown = startmode;
 document.getElementById('score').innerHTML = "SCORE" + " " + " : ";
+document.getElementById('scoreTwo').innerHTML = "SCORE" + " " + " : ";
 start.style.visibility = 'visible';
