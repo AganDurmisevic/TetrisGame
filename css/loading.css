@@ -1,0 +1,182 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+}
+body{
+    background: #39485E;
+}
+
+.tetris {
+
+    position: relative;
+    display:block;
+    width: 384px;
+    height: 192px;
+    margin: 192px auto;
+
+}
+
+.block1, .block2, .block3, .block4 {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    background: #af298a;
+    box-shadow:inset 0 0 0 4px rgba(0, 0, 0, .6);
+}
+
+.block1:before, .block2:before, .block3:before, .block4:before {
+    content: "";
+    display:block;
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 12px;
+    height: 18px;
+    background: rgba(255, 255, 255, .5);
+}
+
+.block1 {
+    left: 48px; top: 0;
+    -webkit-animation: block1 5s infinite linear, colors 5s infinite linear;
+}
+.block2 {
+    left: 144px; top: 0;
+    -webkit-animation: block2 5s infinite linear, colors 5s infinite linear;
+}
+.block3 {
+    left: 240px; top: 0;
+    -webkit-animation: block3 5s infinite linear, colors 5s infinite linear;
+}
+.block4 {
+    left: 144px; top: 96px;
+    -webkit-animation: block4 5s infinite linear, colors 5s infinite linear;
+}
+
+
+/* Text start and animation */
+.neon{
+    font-family: 'Monoton', cursive;
+    font-size:130px;
+    color: #FFD5FF;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 400;
+    letter-spacing: 8px;
+    text-shadow: 1px 0px 4px #FFD5FF, 2px 0px 4px #FFD5FF, 3px 0px 4px #FFD5FF, 2px 0px 3px #D42CCA, 2px 3px 15px #D42CCA, 2px 0px 15px, 5px 0px 125px, 20px 0vw 200px #D42CCA,40px 0vw 200px #D42CCA;
+}
+.flicker-slow{
+    animation: flicker 3s linear infinite;
+}
+.flicker-fast{
+    animation: flicker 1s linear infinite;
+}
+/* Text and animation end */
+
+/* Animation start */
+@keyframes flicker {
+    0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+    //text-shadow: none;
+        opacity: .99;
+
+    }
+    20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+        opacity: 0.4;
+    }
+}
+@keyframes flicker {
+    0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+    //text-shadow: none;
+        opacity: .99;
+
+    }
+    20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+        opacity: 0.4;
+    }
+}
+
+@-webkit-keyframes colors {
+    0% {background: #FF0D72;}
+    7% {background: #FF0D72;}
+    14% {background: #F538FF;}
+    21% {background: #F538FF;}
+    28% {background: #59b101;}
+    35% {background: #59b101;}
+    42% {background: #e39f02;}
+    49% {background: #e39f02;}
+    56% {background: #3efef1f1;}
+    63% {background: #3efef1f1;}
+    70% {background: #3877FF;}
+    77% {background: #3877FF;}
+    84% {background: #3877FF;}
+    91% {background: #3877FF;}
+    100% {background: #FF0D72;}
+}
+
+@-webkit-keyframes block1 {
+    0% {left: 48px; top: 0;}
+    24% {left: 48px; top: 0;}
+    28% {left: 144px; top: 0;}
+    35% {left: 144px; top: 0;}
+    42% {left: 96px; top: 0;}
+    49% {left: 96px; top: 0;}
+    56% {left: 48px; top: 0;}
+    77% {left: 48px; top: 0;}
+    81% {left: 0; top: 0;}
+    84% {left: 0; top: 48px;}
+    91% {left: 0; top: 48px;}
+    95% {left: 0; top: 0;}
+    100% {left: 48px; top: 0;}
+}
+@-webkit-keyframes block2 {
+    0% {left: 144px; top: 0;}
+    21% {left: 144px; top: 0;}
+    25% {left: 144px; top: 96px;}
+    35% {left: 144px; top: 96px;}
+    42% {left: 192px; top: 96px;}
+    49% {left: 192px; top: 96px;}
+    56% {left: 240px; top: 96px;}
+    77% {left: 240px; top: 96px;}
+    81% {left: 288px; top: 96px;}
+    84% {left: 288px; top: 48px;}
+    91% {left: 288px; top: 48px;}
+    95% {left: 288px; top: 0;}
+    100% {left: 240px; top: 0;}
+}
+@-webkit-keyframes block3 {
+    0% {left: 240px; top: 0;}
+    35% {left: 240px; top: 0;}
+    42% {left: 192px; top: 0;}
+    49% {left: 192px; top: 0;}
+    56% {left: 144px; top: 0;}
+    66% {left: 144px; top: 0;}
+    70% {left: 144px; top: 96px;}
+    77% {left: 144px; top: 96px;}
+    81% {left: 192px; top: 96px;}
+    84% {left: 192px; top: 48px;}
+    91% {left: 192px; top: 48px;}
+    95% {left: 192px; top: 96px;}
+    100% {left: 144px; top: 96px;}
+}
+@-webkit-keyframes block4 {
+    0% {left: 144px; top: 96px;}
+    7% {left: 144px; top: 96px;}
+    14% {left: 48px; top: 96px;}
+    35% {left: 48px; top: 96px;}
+    42% {left: 96px; top: 96px;}
+    49% {left: 96px; top: 96px;}
+    56% {left: 144px; top: 96px;}
+    63% {left: 144px; top: 96px;}
+    67% {left: 48px; top: 96px;}
+    77% {left: 48px; top: 96px;}
+    81% {left: 96px; top: 96px;}
+    84% {left: 96px; top: 48px;}
+    91% {left: 96px; top: 48px;}
+    95% {left: 96px; top: 0;}
+    100% {left: 144px; top: 0;}
+}
+/* Animation end */
