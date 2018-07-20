@@ -12,8 +12,8 @@ const LEFT_A = 65;
 const RIGHT_D = 68;
 const DOWN_S = 83;
 
-const ROTATE_LM = 189;
-const ROTATE_RS = 16;
+const ROTATE_LM = 75;
+const ROTATE_RS = 76;
 
 var startmode = function(e) {
 
