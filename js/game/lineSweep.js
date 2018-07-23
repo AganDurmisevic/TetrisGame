@@ -17,7 +17,7 @@ function lineSweep() {
 
             full.play();
             const row = arena1.splice(y, 1)[0].fill(0);
-            arena.unshift(row);
+            arena1.unshift(row);
             drawWorld();
             drawWorld2();
             console.log(counter);

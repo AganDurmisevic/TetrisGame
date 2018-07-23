@@ -1,5 +1,4 @@
 // This multiplayer-function checks a row and if it is full, the function removes it and adds it to the other player's arena
-const emptyRow = [0,0,0,0,0,0,0,0,0,0,0,0];
 function lineSweep() {
 
     const width = 12;
@@ -20,8 +19,8 @@ function lineSweep() {
             full.play();
             const row = arena1.splice(y, 1)[0].fill(0);
             arena1.unshift(row);
-            arena2.splice(0, 1);
-            arena2.push(emptyRow);
+            arena2.shift();
+            arena2.push([0,0,0,0,0,0,0,0,0,0,0,0]);
             for(let i = 0; i < width - 1; i ++) {
                 if(i / 2 === 0) {
                     arena2[arena2.length - 1][i] = 0;
@@ -64,8 +63,8 @@ function lineSweep2() {
             full.play();
             const row = arena2.splice(y, 1)[0].fill(0);
             arena2.unshift(row);
-            arena1.splice(0, 1);
-            arena1.push(emptyRow);
+            arena1.shift();
+            arena1.push([0,0,0,0,0,0,0,0,0,0,0,0]);
             for(let i = 0; i < width - 1; i ++) {
                 if(i / 2 === 0) {
                     arena1[arena1.length - 1][i] = 0;
@@ -78,7 +77,7 @@ function lineSweep2() {
             console.log(counter);
             y ++;
             score += 100;
-            document.getElementById('score').innerHTML = "SCORE: " + score;
+            document.getElementById('scoreTwo').innerHTML = "SCORE: " + score2;
 
         }
 
