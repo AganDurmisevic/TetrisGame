@@ -13,7 +13,7 @@ function moveDown(arena1, player1) {
         document.getElementById( 'score' ).innerHTML = "SCORE: " + score;
         merge(arena1, player1);
         tileReset();
-        lineSweep(arena1);
+        lineSweep();
     }
     drawWorld();
 }
@@ -30,7 +30,7 @@ function moveDown2(arena2, player2) {
         document.getElementById( 'scoreTwo' ).innerHTML = "SCORE: " + score2;
         merge(arena2, player2);
         tileReset2();
-        lineSweep(arena2);
+        lineSweep2();
     }
     drawWorld2();
 

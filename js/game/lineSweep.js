@@ -1,12 +1,12 @@
 // This function checks a row and removes it if it is full
-function lineSweep(arena) {
+function lineSweep() {
 
-    for (let y = arena.length - 1; y > 0; y --) {
+    for (let y = arena1.length - 1; y > 0; y --) {
 
         var counter = 0;
-        for (let x = 0; x < arena[y].length; x++) {
+        for (let x = 0; x < arena1[y].length; x++) {
 
-            if(arena[y][x] === 0) {
+            if(arena1[y][x] === 0) {
                 counter += 1;
 
             }
@@ -16,7 +16,7 @@ function lineSweep(arena) {
         if (counter === 0) {
 
             full.play();
-            const row = arena.splice(y, 1)[0].fill(0);
+            const row = arena1.splice(y, 1)[0].fill(0);
             arena.unshift(row);
             drawWorld();
             drawWorld2();
