@@ -283,6 +283,27 @@ html, body {
 
     }
 
+    #iframe {
+
+        height: 90vh;
+        position: absolute;
+        left: 39.4%;
+        visibility: hidden;
+
+    }
+
+    #iframeCry {
+
+        background-size: 600%;
+        height: 120%;
+        width: 400%;
+        position: absolute;
+        left: -150%;
+        z-index: 20;
+        visibility: hidden;
+
+    }
+
     p {
 
         cursor: pointer;
@@ -589,6 +610,28 @@ html, body {
         top: 0;
         left: 65%;
         border: solid .2em #fff;
+
+    }
+
+    #iframe {
+
+        height: 90vh;
+        width: 412px;
+        position: absolute;
+        left: 35.7%;
+        visibility: hidden;
+
+    }
+
+    #iframeCry {
+
+        background-size: 600%;
+        height: 120%;
+        width: 400%;
+        position: absolute;
+        left: -150%;
+        z-index: 20;
+        visibility: hidden;
 
     }
 
