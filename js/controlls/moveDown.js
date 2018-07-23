@@ -1,5 +1,7 @@
 var score = 0;
 var score2 = 0;
+
+//Player down
 function moveDown(arena1, player1) {
 
     player1.pos.y += 1;
@@ -16,10 +18,11 @@ function moveDown(arena1, player1) {
     drawWorld();
 }
 
+//Player2 down
 function moveDown2(arena2, player2) {
 
     player2.pos.y += 1;
-
+    //Check if arena2 and player2 collide
     if (collide(arena2, player2)) {
 
         move.play();

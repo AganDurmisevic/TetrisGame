@@ -1,3 +1,4 @@
+//The function describes the tiles
 function createTiles(tiles) {
 
     if (tiles === 'I') {

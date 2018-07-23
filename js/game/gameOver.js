@@ -1,5 +1,6 @@
-function gameOver (arena, player) {
 //The function checks if the player has lost (if true - changes to GameOver mode)
+function gameOver (arena, player) {
+
     if(collide(arena, player)) {
 
         clearInterval(interval);

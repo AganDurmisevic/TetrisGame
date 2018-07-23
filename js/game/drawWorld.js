@@ -1,3 +1,4 @@
+//The function draws the world
 function drawWorld() {
 
     if(!(collide(arena1, player1))) {
