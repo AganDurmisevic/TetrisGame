@@ -1,4 +1,5 @@
 var score = 0;
+var score2 = 0;
 function moveDown(arena1, player1) {
 
     player1.pos.y += 1;
@@ -23,8 +24,8 @@ function moveDown2(arena2, player2) {
 
         move.play();
         player2.pos.y -= 1;
-        score += 10;
-        document.getElementById( 'score' ).innerHTML = "SCORE: " + score;
+        score2 += 10;
+        document.getElementById( 'scoreTwo' ).innerHTML = "SCORE: " + score2;
         merge(arena2, player2);
         tileReset2();
         lineSweep(arena2);
