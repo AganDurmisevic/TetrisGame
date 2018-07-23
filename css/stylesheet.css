@@ -30,6 +30,13 @@ html, body {
 
     }
 
+    #keyboard {
+
+        width: 850px;
+        height: 450px;
+
+    }
+
     #menu {
 
         visibility: hidden;
