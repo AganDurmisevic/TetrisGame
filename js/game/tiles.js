@@ -1,4 +1,4 @@
-//The function describes the tiles
+// The function creates the tiles in form of a matrix
 function createTiles(tiles) {
 
     if (tiles === 'I') {

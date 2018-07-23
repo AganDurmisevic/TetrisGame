@@ -1,7 +1,7 @@
 var check = 1000;
 var speed = 1000;
 
-//The function increases the speed
+// This function increases the speed
 function modifySpeed() {
 
     if ( score < check ) {

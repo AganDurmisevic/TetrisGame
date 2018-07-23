@@ -1,3 +1,4 @@
+// This function creates a new tile
 function newTile(matrix) {
 
     smallContext.fillStyle = '#2B3D51';

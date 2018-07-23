@@ -1,4 +1,4 @@
-//The function rotate the tiles right
+// This function rotates the tiles clockwise
 function rotateClockwise(matrix) {
     for (let y = 0; y < matrix.length; ++y) {
         for (let x = 0; x < y; ++x) {

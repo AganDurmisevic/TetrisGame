@@ -1,4 +1,4 @@
-//The function checks a row and removes it if it is full
+// This function checks a row and removes it if it is full
 function lineSweep(arena) {
 
     for (let y = arena.length - 1; y > 0; y --) {

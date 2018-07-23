@@ -17,7 +17,6 @@ const ROTATE_RS = 76;
 
 var interval = 0;
 
-//Startmode for the beginning and only ENTER is expected
 var startmode = function(e) {
 
     sound.play();
@@ -42,11 +41,9 @@ var startmode = function(e) {
 
 }
 
-//Stanadardmode - Movementmode and main listener
 var standardmode = function(e) {
     switch(e.keyCode) {
 
-        //down
         case DOWN: {
 
             moveDown(arena1, player1);
@@ -54,7 +51,6 @@ var standardmode = function(e) {
 
         }
 
-        //left
         case LEFT: {
 
             moveLeft(arena1, player1);
@@ -62,7 +58,6 @@ var standardmode = function(e) {
 
         }
 
-        //right
         case RIGHT: {
 
             moveRight(arena1, player1);
@@ -70,7 +65,6 @@ var standardmode = function(e) {
 
         }
 
-        //rotate clockwise
         case ROTATE_LM: {
 
             rotateClockwise(player1.matrix);
@@ -78,7 +72,6 @@ var standardmode = function(e) {
 
         }
 
-        //rotate counterclockwise
         case ROTATE_RS: {
 
             rotateCounterClockwise(player1.matrix);
@@ -86,7 +79,6 @@ var standardmode = function(e) {
 
         }
 
-        //player2 right
         case RIGHT_D: {
 
             moveRight(arena2, player2);
@@ -94,7 +86,6 @@ var standardmode = function(e) {
 
         }
 
-        //player2 left
         case LEFT_A: {
 
             moveLeft(arena2, player2);
@@ -102,7 +93,6 @@ var standardmode = function(e) {
 
         }
 
-        //player2 down
         case DOWN_S: {
 
             moveDown2(arena2, player2);
@@ -110,7 +100,6 @@ var standardmode = function(e) {
 
         }
 
-        //player2 rotate clockwise
         case ROTATE_L: {
 
             rotateClockwise(player2.matrix);
@@ -118,7 +107,6 @@ var standardmode = function(e) {
 
         }
 
-        //player2 rotate counterclockwise
         case ROTATE_R: {
 
             rotateCounterClockwise(player2.matrix);
@@ -126,7 +114,6 @@ var standardmode = function(e) {
 
         }
 
-        //change to breakmode
         case PAUSE: {
             paused.play();
             sound.stop();
@@ -141,8 +128,6 @@ var standardmode = function(e) {
 
 }
 
-//breakmode for paused game
-//only ENTER is expected
 var breakmode = function(e) {
 
     switch (e.keyCode) {
@@ -165,8 +150,6 @@ var breakmode = function(e) {
 
 }
 
-//GameOver mode if player has lost
-//only ENTER is expected
 var gameOverMode = function(e) {
 
     switch (e.keyCode) {
@@ -185,7 +168,6 @@ var gameOverMode = function(e) {
 
 }
 
-//standardmode
 document.onkeydown = startmode;
 document.getElementById('score').innerHTML = "SCORE" + " " + " : ";
 document.getElementById('scoreTwo').innerHTML = "SCORE" + " " + " : ";

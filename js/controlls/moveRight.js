@@ -1,4 +1,4 @@
-//The function moves the tiles right
+// This function moves the tiles to the right
 function moveRight(arena, player) {
 
     player.pos.x += 1;

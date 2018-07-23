@@ -1,4 +1,5 @@
-function matrix( matrix, offset) {
+// This function draws the matrix
+function drawMatrix( matrix, offset) {
 
     matrix.forEach((row, y) => {
         row.forEach((value, x) => {
@@ -18,6 +19,7 @@ function matrix( matrix, offset) {
     });
 }
 
+// This function is being used to create a matrix filled with zero's
 function createMatrix(h, w) {
 
     const matrix = [];

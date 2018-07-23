@@ -1,4 +1,4 @@
-//The function moves the tiles left
+// This function moves the tiles to the left
 function moveLeft(arena, player) {
 
     player.pos.x -= 1;

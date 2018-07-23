@@ -1,3 +1,4 @@
+// this function resets the tile if it collides anywhere
 function tileReset() {
 
     const tiles = 'OTJSZLI';
