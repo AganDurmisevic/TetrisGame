@@ -4,13 +4,7 @@ const START = 32;
 const LEFT = 37;
 const RIGHT = 39;
 const DOWN = 40;
-const ROTATE_L = 69;
-const ROTATE_R = 81;
 const PAUSE = 80;
-
-const LEFT_A = 65;
-const RIGHT_D = 68;
-const DOWN_S = 83;
 
 const ROTATE_LM = 75;
 const ROTATE_RS = 76;
