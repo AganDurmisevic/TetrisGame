@@ -12,362 +12,724 @@ html, body {
 
 }
 
-#pause, #start, #gameOverAnim {
-
-    visibility: hidden;
-    position: fixed;
-    color: #DFDEFB;
-    font-size: 45px;
-    margin-left: 10px;
-    animation: pause 2s infinite;
-
-}
-
-#pause {
-
-    margin-top: 430px;
-
-}
-
-#menu {
-
-    visibility: hidden;
-    margin: 0;
-    padding-top: 140px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    background: #39485E;
-    color: #39485E;
-    z-index: 20;
-
-}
-
-#close {
-
-    background: darkred;
-    font-size: 40px;
-    font-weight: bolder;
-    font-family: "Nanum Pen Script", "Marker Felt", sans-serif;
-    width: 50px;
-    height: 50px;
-    float: right;
-    margin-top: -80px;
-    border-radius: 12px;
-    margin-right: 40px;
-    text-align: center;
-
-}
-
-#closeList {
-
-    background: darkred;
-    font-size: 40px;
-    font-weight: bolder;
-    font-family: "Nanum Pen Script", "Marker Felt", sans-serif;
-    width: 50px;
-    height: 50px;
-    float: right;
-    margin-top: -165px;
-    border-radius: 12px;
-    margin-right: 40px;
-    text-align: center;
-    color: #39485E;
-    cursor: pointer;
-
-}
-
-#tetris {
-
-    background: orangered;
-    width: 380px;
-    height: 100px;
-    padding: 10px;
-    margin: auto;
-    margin-top: 5%;
-    font-family: "Nanum Pen Script", "Marker Felt", sans-serif;
-    border-radius: 14px;
-    font-size: 80px;
-    color: white;
-
-}
-
-#highscore {
-
-    background: indianred;
-    width: 380px;
-    height: 100px;
-    padding: 10px;
-    margin: auto;
-    margin-top: 5%;
-    font-family: "Nanum Pen Script", "Marker Felt", sans-serif;
-    border-radius: 14px;
-    font-size: 80px;
-    color: white;
-
-}
-
-#versus {
-
-    background: palevioletred;
-    width: 380px;
-    height: 100px;
-    padding: 10px;
-    margin: auto;
-    margin-top: 5%;
-    font-family: "Nanum Pen Script", "Marker Felt", sans-serif;
-    border-radius: 14px;
-    font-size: 80px;
-    color: white;
-
-}
-
-#close:hover, #tetris:hover, #highscore:hover, #versus:hover, #closeList:hover, a:hover {
-
-    color: #39485E;
-    transform: scale(1.1);
-    cursor: pointer;
-
-}
-
-.activ {
-
-    visibility: visible;
-
-}
-
-#mainMenu {
-
-    position: absolute;
-    width: 240px;
-    height: 80px;
-    background: orangered;
-    margin: 0;
-    padding: 0;
-    top: 100px;
-    float: left;
-    left: -190px;
-    border-top-right-radius:    20px 14px;
-    border-bottom-right-radius: 20px 14px;
-    font-family: "Nanum Pen Script", "Marker Felt", sans-serif;
-    font-size: 36px;
-    vertical-align: center;
-    box-shadow: 4px 4px 3px #000;
-    transition: left 1.5s;
-
-}
-
-#mainHighscore {
-
-    position: absolute;
-    width: 240px;
-    height: 80px;
-    background: rosybrown;
-    margin: 0;
-    padding: 0;
-    top: 250px;
-    float: left;
-    left: -190px;
-    border-top-right-radius:    20px 14px;
-    border-bottom-right-radius: 20px 14px;
-    font-family: "Nanum Pen Script", "Marker Felt", sans-serif;
-    font-size: 36px;
-    vertical-align: center;
-    box-shadow: 4px 4px 3px #000;
-    transition: left 1.5s;
-
-}
-
-#mainControlls {
-
-    position: absolute;
-    width: 240px;
-    height: 80px;
-    background: indianred;
-    margin: 0;
-    padding: 0;
-    top: 400px;
-    float: left;
-    left: -190px;
-    border-top-right-radius:    20px 14px;
-    border-bottom-right-radius: 20px 14px;
-    font-family: "Nanum Pen Script", "Marker Felt", sans-serif;
-    font-size: 36px;
-    vertical-align: center;
-    box-shadow: 4px 4px 3px #000;
-    transition: left 1.5s;
-
-}
-
-#mainMenu span {
-
-    position: relative;
-    top: 12px;
-    color: white;
-
-
-}
-
-#mainHighscore span {
-
-    position: relative;
-    top: 20px;
-    color: white;
-    horiz-align: center;
-
-}
-
-#mainControlls span {
-
-    position: relative;
-    top: 20px;
-    color: white;
-    horiz-align: center;
-
-
-}
-
-#mainMenu:hover, #mainHighscore:hover, #mainControlls:hover {
-
-    left: -10px;
-    cursor: pointer;
-    z-index: 5;
-    box-shadow: 10px 10px 5px #000;
-
-}
-
-#score {
-
-    position: fixed;
-    color: #DFDEFB;
-    font-size: 35px;
-    margin-left: 10px;
-    top: 1%;
-
-}
-
-#scoreList {
-
-    visibility: hidden;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    left: 0;
-    top: 0;
-    background: #39485E;
-    z-index: 15;
-
-}
-
-h1 {
-
-    color: orangered;
-    font-size: 90px;
-    font-family: "Nanum Pen Script", "Marker Felt", sans-serif;
-
-}
-
-canvas {
-
-    height: 90vh;
-    border: solid .2em #fff;
-
-}
-
-a {
-
-    text-decoration: none;
-    color: white;
-
-}
-
-#nextTile {
-
-    position: absolute;;
-    height: 240px;
-    width: 200px;
-    background: #2B3D51;
-    top: 65px;
-    left: 65%;
-    border: solid .2em #fff;
-
-}
-
-#iframe {
-
-    height: 90vh;
-    position: absolute;
-    left: 39.4%;
-    visibility: hidden;
-
-}
-
-#iframeCry {
-
-    background-size: 600%;
-    height: 120%;
-    width: 400%;
-    position: absolute;
-    left: -150%;
-    z-index: 20;
-    visibility: hidden;
-
-}
-
-.help {
-
-    visibility: hidden;
-    position: absolute;
-    right: 4%;
-    top: 60%;
-    color: orangered;
-
-}
-
-#close-help {
-
-    float: right;
-    font-family: "Nanum Pen Script", "Marker Felt", sans-serif;
-    font-size: 30px;
-    cursor: pointer;
-
-}
-
-p {
-
-    cursor: pointer;
-
-}
-
-@keyframes pause {
-
-    25% {
-
-        transform: scale(1);
+@media only screen and (min-width: 1600px)  {
+
+    #pause, #start, #gameOverAnim {
+
+        visibility: hidden;
+        position: fixed;
+        color: #DFDEFB;
+        font-size: 38px;
+        animation: pause 2s infinite;
 
     }
 
-    50% {
+    #pause {
 
-        transform: scale(1.4);
+        margin-top: 430px;
+
+    }
+
+    #menu {
+
+        visibility: hidden;
+        margin: 0;
+        padding-top: 140px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        background: #39485E;
+        color: #39485E;
+        z-index: 20;
+
+    }
+
+    #close {
+
+        background: darkred;
+        font-size: 40px;
+        font-weight: bolder;
+        font-family: "Nanum Pen Script", "Marker Felt", sans-serif;
+        width: 50px;
+        height: 50px;
+        float: right;
+        margin-top: -80px;
+        border-radius: 12px;
+        margin-right: 40px;
+        text-align: center;
+
+    }
+
+    #closeList {
+
+        background: darkred;
+        font-size: 40px;
+        font-weight: bolder;
+        font-family: "Nanum Pen Script", "Marker Felt", sans-serif;
+        width: 50px;
+        height: 50px;
+        float: right;
+        margin-top: -165px;
+        border-radius: 12px;
+        margin-right: 40px;
+        text-align: center;
+        color: #39485E;
+        cursor: pointer;
+
+    }
+
+    #tetris {
+
+        background: orangered;
+        width: 380px;
+        height: 100px;
+        padding: 10px;
+        margin: auto;
+        margin-top: 5%;
+        font-family: "Nanum Pen Script", "Marker Felt", sans-serif;
+        border-radius: 14px;
+        font-size: 80px;
+        color: white;
+
+    }
+
+    #highscore {
+
+        background: indianred;
+        width: 380px;
+        height: 100px;
+        padding: 10px;
+        margin: auto;
+        margin-top: 5%;
+        font-family: "Nanum Pen Script", "Marker Felt", sans-serif;
+        border-radius: 14px;
+        font-size: 80px;
+        color: white;
+
+    }
+
+    #versus {
+
+        background: palevioletred;
+        width: 380px;
+        height: 100px;
+        padding: 10px;
+        margin: auto;
+        margin-top: 5%;
+        font-family: "Nanum Pen Script", "Marker Felt", sans-serif;
+        border-radius: 14px;
+        font-size: 80px;
+        color: white;
+
+    }
+
+    #close:hover, #tetris:hover, #highscore:hover, #versus:hover, #closeList:hover, a:hover {
+
+        color: #39485E;
+        transform: scale(1.1);
+        cursor: pointer;
+
+    }
+
+    .activ {
+
+        visibility: visible;
+
+    }
+
+    #mainMenu {
+
+        position: absolute;
+        width: 240px;
+        height: 80px;
+        background: orangered;
+        margin: 0;
+        padding: 0;
+        top: 100px;
+        float: left;
+        left: -190px;
+        border-top-right-radius: 20px 14px;
+        border-bottom-right-radius: 20px 14px;
+        font-family: "Nanum Pen Script", "Marker Felt", sans-serif;
+        font-size: 36px;
+        vertical-align: center;
+        box-shadow: 4px 4px 3px #000;
+        transition: left 1.5s;
+
+    }
+
+    #mainHighscore {
+
+        position: absolute;
+        width: 240px;
+        height: 80px;
+        background: rosybrown;
+        margin: 0;
+        padding: 0;
+        top: 250px;
+        float: left;
+        left: -190px;
+        border-top-right-radius: 20px 14px;
+        border-bottom-right-radius: 20px 14px;
+        font-family: "Nanum Pen Script", "Marker Felt", sans-serif;
+        font-size: 36px;
+        vertical-align: center;
+        box-shadow: 4px 4px 3px #000;
+        transition: left 1.5s;
+
+    }
+
+    #mainControlls {
+
+        position: absolute;
+        width: 240px;
+        height: 80px;
+        background: indianred;
+        margin: 0;
+        padding: 0;
+        top: 400px;
+        float: left;
+        left: -190px;
+        border-top-right-radius: 20px 14px;
+        border-bottom-right-radius: 20px 14px;
+        font-family: "Nanum Pen Script", "Marker Felt", sans-serif;
+        font-size: 36px;
+        vertical-align: center;
+        box-shadow: 4px 4px 3px #000;
+        transition: left 1.5s;
+
+    }
+
+    #mainMenu span {
+
+        position: relative;
+        top: 12px;
+        color: white;
+
+    }
+
+    #mainHighscore span {
+
+        position: relative;
+        top: 20px;
+        color: white;
+        horiz-align: center;
+
+    }
+
+    #mainControlls span {
+
+        position: relative;
+        top: 20px;
+        color: white;
+        horiz-align: center;
+
+    }
+
+    #mainMenu:hover, #mainHighscore:hover, #mainControlls:hover {
+
+        left: -10px;
+        cursor: pointer;
+        z-index: 5;
+        box-shadow: 10px 10px 5px #000;
+
+    }
+
+    #score {
+
+        position: fixed;
+        color: #DFDEFB;
+        font-size: 35px;
+        margin-left: 10px;
+        top: 1%;
+
+    }
+
+    #scoreList {
+
+        visibility: hidden;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        left: 0;
+        top: 0;
+        background: #39485E;
+        z-index: 15;
+
+    }
+
+    h1 {
+
+        color: orangered;
+        font-size: 90px;
+        font-family: "Nanum Pen Script", "Marker Felt", sans-serif;
+
+    }
+
+    canvas {
+
+        height: 90vh;
+        border: solid .2em #fff;
+
+    }
+
+    a {
+
+        text-decoration: none;
+        color: white;
+
+    }
+
+    #nextTile {
+
+        position: absolute;;
+        height: 220px;
+        width: 200px;
+        background: #2B3D51;
+        top: 65px;
+        left: 65%;
+        border: solid .2em #fff;
+
+    }
+
+    #iframe {
+
+        height: 90vh;
+        position: absolute;
+        left: 39.4%;
+        visibility: hidden;
+
+    }
+
+    #iframeCry {
+
+        background-size: 600%;
+        height: 120%;
+        width: 400%;
+        position: absolute;
+        left: -150%;
+        z-index: 20;
+        visibility: hidden;
+
+    }
+
+    .help {
+
+        visibility: hidden;
+        position: absolute;
+        right: 4%;
+        top: 60%;
         color: orangered;
 
     }
 
-    75% {
+    #close-help {
 
-        transform: scale(0.8);
-
-    }
-
-    100% {
-
-        transform: scale(1);
+        float: right;
+        font-family: "Nanum Pen Script", "Marker Felt", sans-serif;
+        font-size: 30px;
+        cursor: pointer;
 
     }
 
+    p {
+
+        cursor: pointer;
+
+    }
+
+    @keyframes pause {
+
+        25% {
+
+            transform: scale(1);
+
+        }
+
+        50% {
+
+            transform: scale(1.4);
+            color: orangered;
+
+        }
+
+        75% {
+
+            transform: scale(0.8);
+
+        }
+
+        100% {
+
+            transform: scale(1);
+
+        }
+
+    }
+}
+
+@media only screen and (max-width: 1550px) {
+
+    #pause, #start, #gameOverAnim {
+
+        visibility: hidden;
+        position: fixed;
+        color: #DFDEFB;
+        font-size: 22px;
+        animation: pause 2s infinite;
+
+    }
+
+    #pause {
+
+        margin-top: 260px;
+
+    }
+
+    #menu {
+
+        visibility: hidden;
+        margin: 0;
+        padding-top: 90px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        background: #39485E;
+        color: #39485E;
+        z-index: 20;
+
+    }
+
+    #close {
+
+        background: darkred;
+        font-size: 40px;
+        font-weight: bolder;
+        font-family: "Nanum Pen Script", "Marker Felt", sans-serif;
+        width: 50px;
+        height: 50px;
+        float: right;
+        margin-top: -40px;
+        border-radius: 12px;
+        margin-right: 40px;
+        text-align: center;
+
+    }
+
+    #closeList {
+
+        background: darkred;
+        font-size: 40px;
+        font-weight: bolder;
+        font-family: "Nanum Pen Script", "Marker Felt", sans-serif;
+        width: 50px;
+        height: 50px;
+        float: right;
+        margin-top: -165px;
+        border-radius: 12px;
+        margin-right: 40px;
+        text-align: center;
+        color: #39485E;
+        cursor: pointer;
+
+    }
+
+    #tetris {
+
+        background: orangered;
+        width: 280px;
+        height: 70px;
+        padding: 10px;
+        margin: auto;
+        margin-top: 5%;
+        font-family: "Nanum Pen Script", "Marker Felt", sans-serif;
+        border-radius: 14px;
+        font-size: 60px;
+        color: white;
+
+    }
+
+    #highscore {
+
+        background: indianred;
+        width: 280px;
+        height: 70px;
+        padding: 10px;
+        margin: auto;
+        margin-top: 5%;
+        font-family: "Nanum Pen Script", "Marker Felt", sans-serif;
+        border-radius: 14px;
+        font-size: 60px;
+        color: white;
+
+    }
+
+    #versus {
+
+        background: palevioletred;
+        width: 280px;
+        height: 70px;
+        padding: 10px;
+        margin: auto;
+        margin-top: 5%;
+        font-family: "Nanum Pen Script", "Marker Felt", sans-serif;
+        border-radius: 14px;
+        font-size: 60px;
+        color: white;
+
+    }
+
+    #close:hover, #tetris:hover, #highscore:hover, #versus:hover, #closeList:hover, a:hover {
+
+        color: #39485E;
+        transform: scale(1.1);
+        cursor: pointer;
+
+    }
+
+    .activ {
+
+        visibility: visible;
+
+    }
+
+    #mainMenu {
+
+        position: absolute;
+        width: 200px;
+        height: 64px;
+        background: orangered;
+        margin: 0;
+        padding: 0;
+        top: 100px;
+        float: left;
+        left: -170px;
+        border-top-right-radius: 20px 14px;
+        border-bottom-right-radius: 20px 14px;
+        font-family: "Nanum Pen Script", "Marker Felt", sans-serif;
+        font-size: 36px;
+        vertical-align: center;
+        box-shadow: 4px 4px 3px #000;
+        transition: left 1.5s;
+
+    }
+
+    #mainHighscore {
+
+        position: absolute;
+        width: 200px;
+        height: 64px;
+        background: rosybrown;
+        margin: 0;
+        padding: 0;
+        top: 200px;
+        float: left;
+        left: -170px;
+        border-top-right-radius: 20px 14px;
+        border-bottom-right-radius: 20px 14px;
+        font-family: "Nanum Pen Script", "Marker Felt", sans-serif;
+        font-size: 36px;
+        vertical-align: center;
+        box-shadow: 4px 4px 3px #000;
+        transition: left 1.5s;
+
+    }
+
+    #mainControlls {
+
+        position: absolute;
+        width: 200px;
+        height: 64px;
+        background: indianred;
+        margin: 0;
+        padding: 0;
+        top: 300px;
+        float: left;
+        left: -170px;
+        border-top-right-radius: 20px 14px;
+        border-bottom-right-radius: 20px 14px;
+        font-family: "Nanum Pen Script", "Marker Felt", sans-serif;
+        font-size: 36px;
+        vertical-align: center;
+        box-shadow: 4px 4px 3px #000;
+        transition: left 1.5s;
+
+    }
+
+    #mainMenu span {
+
+        position: relative;
+        top: 10px;
+        color: white;
+
+    }
+
+    #mainHighscore span {
+
+        position: relative;
+        top: 10px;
+        color: white;
+        horiz-align: center;
+
+    }
+
+    #mainControlls span {
+
+        position: relative;
+        top: 10px;
+        color: white;
+        horiz-align: center;
+
+    }
+
+    #mainMenu:hover, #mainHighscore:hover, #mainControlls:hover {
+
+        left: -10px;
+        cursor: pointer;
+        z-index: 5;
+        box-shadow: 10px 10px 5px #000;
+
+    }
+
+    #score {
+
+        position: fixed;
+        color: #DFDEFB;
+        font-size: 22px;
+        margin-left: 0;
+        top: 1%;
+
+    }
+
+    #scoreList {
+
+        visibility: hidden;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        left: 0;
+        top: 0;
+        background: #39485E;
+        z-index: 15;
+
+    }
+
+    h1 {
+
+        color: orangered;
+        font-size: 90px;
+        font-family: "Nanum Pen Script", "Marker Felt", sans-serif;
+
+    }
+
+    canvas {
+
+        height: 90vh;
+        border: solid .2em #fff;
+
+    }
+
+    a {
+
+        text-decoration: none;
+        color: white;
+
+    }
+
+    #nextTile {
+
+        position: absolute;;
+        height: 200px;
+        width: 180px;
+        background: #2B3D51;
+        top: 35px;
+        left: 68%;
+        border: solid .2em #fff;
+
+    }
+
+    #iframe {
+
+        height: 90vh;
+        width: 412px;
+        position: absolute;
+        left: 35.7%;
+        visibility: hidden;
+
+    }
+
+    #iframeCry {
+
+        background-size: 600%;
+        height: 120%;
+        width: 400%;
+        position: absolute;
+        left: -150%;
+        z-index: 20;
+        visibility: hidden;
+
+    }
+
+    .help {
+
+        visibility: hidden;
+        position: absolute;
+        right: 3%;
+        top: 55%;
+        color: orangered;
+
+    }
+
+    #close-help {
+
+        float: right;
+        font-family: "Nanum Pen Script", "Marker Felt", sans-serif;
+        font-size: 20px;
+        cursor: pointer;
+
+    }
+
+    p {
+
+        cursor: pointer;
+
+    }
+
+    @keyframes pause {
+
+        25% {
+
+            transform: scale(1);
+
+        }
+
+        50% {
+
+            transform: scale(1.4);
+            color: orangered;
+
+        }
+
+        75% {
+
+            transform: scale(0.8);
+
+        }
+
+        100% {
+
+            transform: scale(1);
+
+        }
+
+    }
+    
 }

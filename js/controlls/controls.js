@@ -110,6 +110,9 @@ var breakmode = function(e) {
             document.onkeydown = standardmode;
             pause.style.visibility = 'hidden';
             iframe.style.visibility = 'hidden';
+            interval = setInterval(function() {
+                moveDown(arena1, player1);
+            }, 1000);
             break;
 
         }
