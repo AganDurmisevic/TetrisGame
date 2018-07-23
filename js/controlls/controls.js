@@ -137,5 +137,5 @@ var gameOverMode = function(e) {
 
 // standardmode
 document.onkeydown = startmode;
-document.getElementById('score').innerHTML = "SCORE" + " " + " : ";
+document.getElementById('score').innerHTML = "SCORE" + " " + " : " + score;
 start.style.visibility = 'visible';
