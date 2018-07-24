@@ -1,4 +1,9 @@
-// The function checks if the tiles collide with the arena or any other tile
+/**
+ * The function checks if the tiles collide with the arena or any other tile
+ * @param arena
+ * @param player
+ * @returns {boolean}
+ */
 function collide (arena, player) {
     const m = player.matrix;
     const o = player.pos;

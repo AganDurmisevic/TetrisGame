@@ -1,4 +1,10 @@
-// This function creates a new tile
+/**
+ * This function creates a new tile
+ * @param matrix
+ * @param nextTile
+ * @param smallContext
+ * @param smallCanvas
+ */
 function newTile (matrix, nextTile, smallContext, smallCanvas) {
 
     smallContext.fillStyle = '#2B3D51';

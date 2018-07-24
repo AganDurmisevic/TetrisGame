@@ -1,4 +1,8 @@
-// This function checks if the player has lost (if true - changes to GameOver mode)
+/**
+ * This function checks if the player has lost (if true - changes to GameOver mode)
+ * @param arena
+ * @param player
+ */
 function gameOver (arena, player) {
 
     if (collide(arena, player)) {

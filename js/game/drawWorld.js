@@ -1,4 +1,13 @@
-// This function draws the world
+/**
+ * This function draws the world
+ * @param arena
+ * @param player
+ * @param nextTile
+ * @param canvas
+ * @param context
+ * @param smallContext
+ * @param smallCanvas
+ */
 function drawWorld (arena, player, nextTile, canvas, context, smallContext, smallCanvas) {
     if (!(collide (arena, player ))) {
         context.fillStyle = '#2B3D51';

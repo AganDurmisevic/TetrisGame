@@ -1,4 +1,7 @@
-// This function records the highscore
+/**
+ * This function records the highscore
+ * @type {any | Array}
+ */
 var scorelist = JSON.parse (localStorage.getItem ("scorelist")) || [];
 
 function drawHighscorelist () {

@@ -1,4 +1,9 @@
-// This function draws the matrix
+/**
+ * This function draws the matrix
+ * @param matrix
+ * @param offset
+ * @param context is the canvas
+ */
 function drawMatrix (matrix, offset, context) {
     matrix.forEach ((row, y) => {
         row.forEach ((value, x) => {

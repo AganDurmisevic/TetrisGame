@@ -1,4 +1,9 @@
-// This function is being used to create a matrix filled with zero's
+/**
+ * This function is being used to create a matrix filled with zero's
+ * @param h is the height of the Matrix
+ * @param w is the width of the Matrix
+ * @returns {Array}
+ */
 function createMatrix (h, w) {
     const matrix = [];
 

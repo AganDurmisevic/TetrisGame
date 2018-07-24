@@ -1,3 +1,7 @@
+/**
+ * This function creates a new tile
+ * @type {*[]}
+ */
 const colors = [
     null,
     '#FF0D72',

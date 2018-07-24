@@ -1,4 +1,14 @@
-// This function checks a row and removes it if it is full
+/**
+ * This function checks a row and removes it if it is full
+ * @param arena
+ * @param player
+ * @param nextPlayer
+ * @param scoreCounter
+ * @param canvas
+ * @param context
+ * @param smallContext
+ * @param smallCanvas
+ */
 function lineSweep (arena, player, nextPlayer, scoreCounter, canvas, context, smallContext, smallCanvas) {
     var rowCount = 0;
     for (let y = arena.length - 1; y > 0; y --) {

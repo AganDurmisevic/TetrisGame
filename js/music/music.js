@@ -1,4 +1,6 @@
-// howler.js -> makes it easier to play the music.
+/**
+ * howler.js -> makes it easier to play the music.
+ */
 var sound = new Howl ({
 
     src: ['audio/Tetris.mp3'],

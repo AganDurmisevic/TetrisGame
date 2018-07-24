@@ -1,4 +1,9 @@
-// this function resets the tile if it collides anywhere
+/**
+ * This function resets the tile if it collides anywhere
+ * @param nextTile
+ * @param player
+ * @param arena
+ */
 function tileReset (nextTile, player, arena) {
 
     const tiles = 'OTJSZLI';

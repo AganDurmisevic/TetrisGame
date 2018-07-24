@@ -1,3 +1,14 @@
+/**
+ *
+ * @param arena
+ * @param player
+ * @param nextPlayer
+ * @param scoreCounter
+ * @param canvas
+ * @param context
+ * @param smallContext
+ * @param smallCanvas
+ */
 function lineSweep (arena, player, nextPlayer, scoreCounter, canvas, context, smallContext, smallCanvas) {
 
     var rowCount = 0;

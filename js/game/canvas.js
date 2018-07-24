@@ -1,4 +1,7 @@
-// Canvas
+/**
+ * Canvas
+ * @type {HTMLElement | null}
+ */
 const canvas1 = document.getElementById ('canvas');
 const context1 = canvas1.getContext ('2d');
 const smallCanvas1 = document.getElementById ('nextTile');

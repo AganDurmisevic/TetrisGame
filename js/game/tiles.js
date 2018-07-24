@@ -1,4 +1,8 @@
-// The function creates the tiles in form of a matrix
+/**
+ * The function creates the tiles in form of a matrix
+ * @param tiles
+ * @returns {*[]}
+ */
 function createTiles (tiles) {
 
     if (tiles === 'I') {

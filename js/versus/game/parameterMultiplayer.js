@@ -1,3 +1,7 @@
+/**
+ *
+ * @type {{pos: {x: number, y: number}, matrix: null, score: number, tempPlayer: null, identifier: number}}
+ */
 const player2 = {
     pos: {
         x: 0,

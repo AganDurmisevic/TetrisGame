@@ -1,3 +1,7 @@
+/**
+ * EventListener
+ * @type {number}
+ */
 const ENTER = 13;
 const START = 32;
 const LEFT = 37;
