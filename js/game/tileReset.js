@@ -6,7 +6,7 @@
  */
 function tileReset (nextTile, player, arena) {
 
-    const tiles = 'OTJSZLI';
+    const tiles = 'OTJSZLIU';
 
     var next = (tiles.length * Math.random () | 0);
     var current = (tiles.length * Math.random () | 0);

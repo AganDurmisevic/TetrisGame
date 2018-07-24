@@ -48,5 +48,12 @@ function createTiles (tiles) {
             [1, 1, 1],
             [0, 0, 0],
         ];
+    } else if (tiles === 'U') {
+        return [
+            [0, 8, 0],
+            [0, 8, 0],
+            [0, 8, 0],
+        ];
     }
+
 }
