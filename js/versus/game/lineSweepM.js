@@ -23,12 +23,8 @@ function lineSweep(arena, player, nextPlayer, scoreCounter, canvas, context, sma
                 case 1: {
                     arena2.shift();
                     arena2.push([0,0,0,0,0,0,0,0,0,0,0,0]);
-                    for(let i = 0; i < width - 1; i ++) {
-                        if(i / 2 === 0) {
-                            arena2[arena2.length - 1][i] = 0;
-                        } else {
+                    for(let i = 0; i < width; i ++) {
                             arena2[arena2.length - 1][i] = 1;
-                        }
                     }
                     break;
                 }
@@ -36,11 +32,7 @@ function lineSweep(arena, player, nextPlayer, scoreCounter, canvas, context, sma
                     arena1.shift();
                     arena1.push([0,0,0,0,0,0,0,0,0,0,0,0]);
                     for(let i = 0; i < width - 1; i ++) {
-                        if(i / 2 === 0) {
-                            arena1[arena1.length - 1][i] = 0;
-                        } else {
                             arena1[arena1.length - 1][i] = 1;
-                        }
                     }
                     break;
                 }
