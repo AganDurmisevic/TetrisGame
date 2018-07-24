@@ -33,7 +33,6 @@ var startmode = function(e) {
             document.onkeydown = standardMode;
             drawWorld(arena1, player1, nextPlayer1, canvas2, context2, smallContext2, smallCanvas2);
             drawWorld(arena2, player2, nextPlayer2, canvas1, context1, smallContext1, smallCanvas1);
-            document.onkeydown = standardmode;
             break;
         }
     }

@@ -24,6 +24,7 @@ function lineSweep (arena, player, nextPlayer, scoreCounter, canvas, context, sm
             full.play();
             const row = arena.splice(y, 1)[0].fill(0);
             arena.unshift (row);
+            var random = Math.floor(width * Math.random());
             switch(player.identifier) {
                 case 1: {
                     arena2.shift();
@@ -31,17 +32,20 @@ function lineSweep (arena, player, nextPlayer, scoreCounter, canvas, context, sm
                     for (let i = 0; i < width; i ++) {
                         arena2[arena2.length - 1][i] = 1;
                     }
+                    arena2[arena2.length - 1][random] = 0;
                     break;
                 }
                 case 2: {
                     arena1.shift ();
                     arena1.push ([0,0,0,0,0,0,0,0,0,0,0,0]);
-                    for (let i = 0; i < width - 1; i ++) {
+                    for (let i = 0; i < width; i ++) {
                         arena1[arena1.length - 1][i] = 1;
                     }
+                    arena1[arena1.length - 1][random] = 0;
                     break;
                 }
             }
+            console.log(random);
             drawWorld (arena, player, nextPlayer, canvas, context, smallContext, smallCanvas);
             console.log (counter);
             y ++;
