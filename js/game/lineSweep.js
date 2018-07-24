@@ -9,7 +9,7 @@
  * @param smallContext
  * @param smallCanvas
  */
-function lineSweep (arena, player, nextPlayer, scoreCounter, canvas, context, smallContext, smallCanvas) {
+function lineSweep (arena, player, nextTile, scoreCounter, canvas, context, smallContext, smallCanvas) {
     var rowCount = 0;
     for (let y = arena.length - 1; y > 0; y --) {
         var counter = 0;
