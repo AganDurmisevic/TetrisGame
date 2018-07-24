@@ -22,6 +22,6 @@ function longerThanFive() {
 
 // The function adds a score to the list
 function addScore() {
-    scorelist.push(score);
+    scorelist.push(player1.score);
     localStorage.setItem("scorelist", JSON.stringify(scorelist));
 }

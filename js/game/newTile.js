@@ -1,5 +1,5 @@
 // This function creates a new tile
-function newTile(matrix) {
+function newTile(matrix, nextPlayer, smallContext, smallCanvas) {
 
     smallContext.fillStyle = '#2B3D51';
     smallContext.fillRect ( 0, 0, smallCanvas.width, smallCanvas.height );

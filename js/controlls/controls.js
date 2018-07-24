@@ -19,11 +19,11 @@ var startmode = function(e) {
 
         case START : {
             interval = setInterval(function() {
-                                moveDown(arena1, player1);
+                                moveDown(arena1, player1, nextPlayer1, canvas1, context1, 'score', smallContext1, smallCanvas1);
             }, 1000);
             start.style.visibility = 'hidden';
-            tileReset();
-            drawWorld();
+            tileReset(nextPlayer1, player1, arena1);
+            drawWorld(arena1, player1, nextPlayer1, canvas1, context1, smallContext1, smallCanvas1);
             document.onkeydown = standardmode;
             break;
 
@@ -40,7 +40,7 @@ var standardmode = function(e) {
         // down
         case DOWN: {
 
-            moveDown(arena1, player1);
+            moveDown(arena1, player1, nextPlayer1, canvas1, context1, 'score', smallContext1, smallCanvas1);
             break;
 
         }
@@ -48,7 +48,7 @@ var standardmode = function(e) {
         // left
         case LEFT: {
 
-            moveLeft(arena1, player1);
+            moveLeft(arena1, player1, nextPlayer1, canvas1, context1, smallContext1, smallCanvas1);
             break;
 
         }
@@ -56,7 +56,7 @@ var standardmode = function(e) {
         // right
         case RIGHT: {
 
-            moveRight(arena1, player1);
+            moveRight(arena1, player1, nextPlayer1, canvas1, context1, smallContext1, smallCanvas1);
             break;
 
         }
@@ -64,7 +64,7 @@ var standardmode = function(e) {
         // rotate clockwise
         case ROTATE_LM: {
 
-            rotateClockwise(player1.matrix);
+            rotateClockwise(player1.matrix, arena1, player1, nextPlayer1, canvas1, context1, smallContext1, smallCanvas1);
             break;
 
         }
@@ -72,7 +72,7 @@ var standardmode = function(e) {
         // rotate counterclockwise
         case ROTATE_RS: {
 
-            rotateCounterClockwise(player1.matrix);
+            rotateCounterClockwise(player1.matrix, arena1, player1, nextPlayer1, canvas1, context1, smallContext1, smallCanvas1);
             break;
 
         }
@@ -105,7 +105,7 @@ var breakmode = function(e) {
             pause.style.visibility = 'hidden';
             iframe.style.visibility = 'hidden';
             interval = setInterval(function() {
-                moveDown(arena1, player1);
+                moveDown(arena1, player1, nextPlayer1, canvas1, context1, 'score', smallContext1, smallCanvas1);
             }, 1000);
             break;
 
@@ -137,5 +137,5 @@ var gameOverMode = function(e) {
 
 // standardmode
 document.onkeydown = startmode;
-document.getElementById('score').innerHTML = "SCORE" + " " + " : " + score;
+document.getElementById('score').innerHTML = "SCORE" + " " + " : " + player1.score;
 start.style.visibility = 'visible';

@@ -1,5 +1,5 @@
 // This function rotates the tiles to the left
-function rotateCounterClockwise(matrix) {
+function rotateCounterClockwise(matrix, arena, player, nextPlayer, canvas, context, smallContext, smallCanvas) {
     for (let y = 0; y < matrix.length; ++y) {
         for (let x = 0; x < y; ++x) {
             [
@@ -12,6 +12,5 @@ function rotateCounterClockwise(matrix) {
         }
     }
     matrix.reverse();
-    drawWorld();
-    drawWorld2();
+    drawWorld(arena, player, nextPlayer, canvas, context, smallContext, smallCanvas);
 }

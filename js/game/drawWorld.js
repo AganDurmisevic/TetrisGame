@@ -1,15 +1,15 @@
 // This function draws the world
-function drawWorld() {
+function drawWorld(arena, player, nextPlayer, canvas, context, smallContext, smallCanvas) {
 
-    if(!(collide(arena1, player1))) {
+    if(!(collide(arena, player))) {
 
         context.fillStyle = '#2B3D51';
         context.fillRect ( 0, 0, canvas.width, canvas.height );
 
-        drawMatrix ( arena1, { x: 0, y: 0 } );
-        drawMatrix ( player1.matrix, player1.pos );
+        drawMatrix ( arena, { x: 0, y: 0 }, context);
+        drawMatrix ( player.matrix, player.pos, context);
 
-        newTile ( nextPlayer.matrix );
+        newTile ( nextPlayer.matrix, nextPlayer, smallContext, smallCanvas);
 
     }
 

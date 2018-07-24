@@ -1,54 +1,19 @@
 // Canvas
-const canvas = document.getElementById('canvas');
-const context = canvas.getContext('2d');
+const canvas1 = document.getElementById('canvas');
+const context1 = canvas1.getContext('2d');
 
-const smallCanvas = document.getElementById('nextTile');
-const smallContext = smallCanvas.getContext('2d');
-var tempPlayer = null;
+const smallCanvas1 = document.getElementById('nextTile');
+const smallContext1 = smallCanvas1.getContext('2d');
 
 
-context.scale(20, 20);
-smallContext.scale(77, 35);
 
-context.fillStyle = '#2B3D51';
-context.fillRect(0, 0, canvas.width, canvas.height);
+context1.scale(20, 20);
+smallContext1.scale(77, 35);
 
-const colors = [
-    null,
-    '#FF0D72',
-    '#0DC2FF',
-    '#FFF',
-    '#F538FF',
-    '#FF8E0D',
-    '#FFE138',
-    '#3877FF',
-];
+context1.fillStyle = '#2B3D51';
+context1.fillRect(0, 0, canvas1.width, canvas1.height);
 
-const player1 = {
-    pos: {
-        x: 0,
-        y: 0,
-    },
-    matrix: null,
-};
 
-const player2 = {
-    pos: {
-        x: 0,
-        y: 0,
-    },
-    matrix: null,
-};
 
-const nextPlayer = {
 
-    pos: {
 
-        x: 0,
-        y: 0,
-
-    },
-
-    matrix: null,
-
-};

@@ -1,12 +1,12 @@
 // This function checks a row and removes it if it is full
-function lineSweep() {
+function lineSweep(arena, player, nextPlayer, scoreCounter, canvas, context, smallContext, smallCanvas) {
 
-    for (let y = arena1.length - 1; y > 0; y --) {
+    for (let y = arena.length - 1; y > 0; y --) {
 
         var counter = 0;
-        for (let x = 0; x < arena1[y].length; x++) {
+        for (let x = 0; x < arena[y].length; x++) {
 
-            if(arena1[y][x] === 0) {
+            if(arena[y][x] === 0) {
                 counter += 1;
 
             }
@@ -16,14 +16,13 @@ function lineSweep() {
         if (counter === 0) {
 
             full.play();
-            const row = arena1.splice(y, 1)[0].fill(0);
-            arena1.unshift(row);
-            drawWorld();
-            drawWorld2();
+            const row = arena.splice(y, 1)[0].fill(0);
+            arena.unshift(row);
+            drawWorld(arena, player, nextPlayer, canvas, context, smallContext, smallCanvas);
             console.log(counter);
             y ++;
-            score += 100;
-            document.getElementById('score').innerHTML = "SCORE: " + score;
+            player.score += 100;
+            document.getElementById(scoreCounter).innerHTML = "SCORE: " + player.score;
 
         }
 

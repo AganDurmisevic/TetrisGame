@@ -5,11 +5,11 @@ function gameOver (arena, player) {
 
         clearInterval(interval);
         document.onkeydown = gameOverMode;
-        iframeCry.style.visibility = 'visible';
-        gameOverAnim.style.visibility = 'visible';
+        //iframeCry.style.visibility = 'visible';
+        //gameOverAnim.style.visibility = 'visible';
         addScore();
 
-        setTimeout(function() {
+        /*setTimeout(function() {
             iframeCry.style.display = 'none';
             canvas.style.display = 'none';
             canvasTwo.style.display = 'none';
@@ -18,7 +18,7 @@ function gameOver (arena, player) {
             mainMenu.style.visibility = 'hidden';
             mainHighscore.style.visibility = 'hidden';
             mainControlls.style.visibility = 'hidden';
-        }, 3000);
+        }, 3000);*/
 
     }
 
