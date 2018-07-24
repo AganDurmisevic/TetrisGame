@@ -11,6 +11,7 @@ function gameOver (arena, player) {
         document.onkeydown = gameOverMode;
         iframeCry.style.visibility = 'visible';
         gameOverAnim.style.visibility = 'visible';
+        yourName = prompt("YOUR NAME: ", "");
         addScore ();
 
         setTimeout (function() {
@@ -18,10 +19,10 @@ function gameOver (arena, player) {
             canvas.style.display = 'none';
             nextTile.style.display = 'none';
             mainMenu.style.visibility = 'hidden';
-            mainHighscore.style.visibility = 'hidden';
+            mainControlls.style.visibility = 'hidden';
             canvasTwo.style.display = 'none';
             nextTile2.style.display = 'none';
-            mainControlls.style.visibility = 'hidden';
+            mainHighscore.style.visibility = 'hidden';
         }, 3000);
 
     }
