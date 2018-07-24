@@ -1,5 +1,5 @@
 // this function resets the tile if it collides anywhere
-function tileReset(nextPlayer, player, arena) {
+function tileReset(nextTile, player, arena) {
 
     const tiles = 'OTJSZLI';
 
@@ -10,7 +10,7 @@ function tileReset(nextPlayer, player, arena) {
     if (player.tempPlayer !== null) {
         current = player.tempPlayer;
     }
-    nextPlayer.matrix = createTiles(tiles[next]);
+    nextTile.matrix = createTiles(tiles[next]);
     player.matrix = createTiles(tiles[current]);
 
     player.pos.y = 0;

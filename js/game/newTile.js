@@ -1,11 +1,11 @@
 // This function creates a new tile
-function newTile(matrix, nextPlayer, smallContext, smallCanvas) {
+function newTile(matrix, nextTile, smallContext, smallCanvas) {
 
     smallContext.fillStyle = '#2B3D51';
     smallContext.fillRect ( 0, 0, smallCanvas.width, smallCanvas.height );
 
-    nextPlayer.pos.y = (smallContext.length / 2 | 0) - (nextPlayer.matrix[0].length / 2 | 0);
-    nextPlayer.pos.x = (smallContext.length / 2 | 0) - (nextPlayer.matrix[0].length / 2 | 0);
+    nextTile.pos.y = (smallContext.length / 2 | 0) - (nextTile.matrix[0].length / 2 | 0);
+    nextTile.pos.x = (smallContext.length / 2 | 0) - (nextTile.matrix[0].length / 2 | 0);
 
     matrix.forEach((row, y) => {
         row.forEach((value, x) => {

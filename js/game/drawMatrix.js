@@ -1,6 +1,5 @@
 // This function draws the matrix
 function drawMatrix( matrix, offset, context) {
-
     matrix.forEach((row, y) => {
         row.forEach((value, x) => {
             if(value !== 0) {

@@ -23,12 +23,8 @@ const player1 = {
 const nextPlayer1 = {
 
     pos: {
-
         x: 0,
         y: 0,
-
     },
-
     matrix: null,
-
 };

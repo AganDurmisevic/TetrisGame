@@ -1,5 +1,5 @@
 // Player down
-function moveDown(arena, player, nextPlayer, canvas, context, scoreCounter, smallContext, smallCanvas) {
+function moveDown(arena, player, nextTile, canvas, context, scoreCounter, smallContext, smallCanvas) {
 
     player.pos.y += 1;
     //Check if arena and player collide
@@ -9,8 +9,8 @@ function moveDown(arena, player, nextPlayer, canvas, context, scoreCounter, smal
         player.score += 10;
         document.getElementById( scoreCounter ).innerHTML = "SCORE: " + player.score;
         merge(arena, player);
-        tileReset(nextPlayer, player, arena);
-        lineSweep(arena, player, nextPlayer, scoreCounter, canvas, context, smallContext, smallCanvas);
+        tileReset(nextTile, player, arena);
+        lineSweep(arena, player, nextTile, scoreCounter, canvas, context, smallContext, smallCanvas);
     }
-    drawWorld(arena, player, nextPlayer, canvas, context, smallContext, smallCanvas);
+    drawWorld(arena, player, nextTile, canvas, context, smallContext, smallCanvas);
 }
