@@ -6,12 +6,13 @@ var scorelist = JSON.parse (localStorage.getItem ("scorelist")) || [];
 
 function drawHighscorelist () {
     document.getElementById ('highscorelist').innerHTML = "";
-    scorelist.sort (function(a, b){return a-b});
-    scorelist.reverse ();
+    scorelist.sort (function(a, b){return  a.score - b.score });
+    scorelist.reverse();
+    debugger;
     longerThanFive ();
     for (let i = 1; i < scorelist.length + 1; i ++) {
         document.getElementById ('highscorelist').innerHTML += "<br>";
-        document.getElementById ('highscorelist').innerHTML += "<h2>" + i + ".&nbsp;&nbsp;" + scorelist[i - 1] + "</h2>";
+        document.getElementById ('highscorelist').innerHTML += "<h2>" + i + ".&nbsp;&nbsp;" + scorelist[i - 1].score + "&nbsp;&nbsp;" + scorelist[i - 1].name + "</h2>";
         document.getElementById ('highscorelist').innerHTML += "<br>";
     }
 }
@@ -25,6 +26,6 @@ function longerThanFive () {
 
 // The function adds a score to the list
 function addScore () {
-    scorelist.push (player1.score);
+    scorelist.push ({ score: player1.score, name: yourName });
     localStorage.setItem ("scorelist", JSON.stringify (scorelist));
 }

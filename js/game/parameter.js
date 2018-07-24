@@ -2,6 +2,8 @@
  * This function creates a new tile
  * @type {*[]}
  */
+
+var yourName = "";
 const colors = [
     null,
     '#FF0D72',
