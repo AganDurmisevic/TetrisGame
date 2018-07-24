@@ -1,9 +1,9 @@
 // This function is being used to create a matrix filled with zero's
-function createMatrix(h, w) {
+function createMatrix (h, w) {
     const matrix = [];
 
-    while(h--) {
-        matrix.push(new Array(w).fill(0));
+    while (h--) {
+        matrix.push (new Array(w).fill(0));
     }
     return matrix;
 }

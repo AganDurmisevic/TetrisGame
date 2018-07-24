@@ -1,5 +1,5 @@
 // This function checks a row and removes it if it is full
-function lineSweep(arena, player, nextPlayer, scoreCounter, canvas, context, smallContext, smallCanvas) {
+function lineSweep (arena, player, nextPlayer, scoreCounter, canvas, context, smallContext, smallCanvas) {
     var rowCount = 0;
     for (let y = arena.length - 1; y > 0; y --) {
         var counter = 0;
@@ -18,7 +18,7 @@ function lineSweep(arena, player, nextPlayer, scoreCounter, canvas, context, sma
             rowCount ++;
         }
     }
-    if(rowCount !== 0) {
+    if (rowCount !== 0) {
         player.score += 100 * (rowCount * 2);
         document.getElementById(scoreCounter).innerHTML = "SCORE: " + player.score;
     }

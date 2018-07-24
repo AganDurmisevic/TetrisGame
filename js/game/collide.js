@@ -1,5 +1,5 @@
 // The function checks if the tiles collide with the arena or any other tile
-function collide(arena, player) {
+function collide (arena, player) {
     const m = player.matrix;
     const o = player.pos;
     for (let y = 0; y < m.length; ++y) {

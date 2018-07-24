@@ -9,16 +9,16 @@ const ROTATE_RS = 76;
 var interval = 0;
 
 // Startmode for the beginning, only ENTER is expected
-var startmode = function(e) {
+var startmode = function (e) {
     sound.play();
     switch (e.keyCode) {
         case START : {
-            interval = setInterval(function() {
+            interval = setInterval (function () {
                                 moveDown(arena1, player1, nextPlayer1, canvas1, context1, 'score', smallContext1, smallCanvas1);
             }, 1000);
             start.style.visibility = 'hidden';
-            tileReset(nextPlayer1, player1, arena1);
-            drawWorld(arena1, player1, nextPlayer1, canvas1, context1, smallContext1, smallCanvas1);
+            tileReset (nextPlayer1, player1, arena1);
+            drawWorld (arena1, player1, nextPlayer1, canvas1, context1, smallContext1, smallCanvas1);
             document.onkeydown = standardMode;
             break;
         }
@@ -26,38 +26,38 @@ var startmode = function(e) {
 }
 
 // Standadardmode - the tiles are being generated and start moving, main listener
-var standardMode = function(e) {
-    switch(e.keyCode) {
+var standardMode = function (e) {
+    switch (e.keyCode) {
         // down
         case DOWN: {
-            moveDown(arena1, player1, nextPlayer1, canvas1, context1, 'score', smallContext1, smallCanvas1);
+            moveDown (arena1, player1, nextPlayer1, canvas1, context1, 'score', smallContext1, smallCanvas1);
             break;
         }
         // left
         case LEFT: {
-            moveLeft ( arena1, player1, nextPlayer1, canvas1, context1, smallContext1, smallCanvas1 );
+            moveLeft (arena1, player1, nextPlayer1, canvas1, context1, smallContext1, smallCanvas1 );
             break;
         }
         // right
         case RIGHT: {
-            moveRight(arena1, player1, nextPlayer1, canvas1, context1, smallContext1, smallCanvas1);
+            moveRight (arena1, player1, nextPlayer1, canvas1, context1, smallContext1, smallCanvas1);
             break;
         }
         // rotate clockwise
         case ROTATE_LM: {
-            rotateClockwise(player1.matrix, arena1, player1, nextPlayer1, canvas1, context1, smallContext1, smallCanvas1);
+            rotateClockwise (player1.matrix, arena1, player1, nextPlayer1, canvas1, context1, smallContext1, smallCanvas1);
             break;
         }
         // rotate counterclockwise
         case ROTATE_RS: {
-            rotateCounterClockwise(player1.matrix, arena1, player1, nextPlayer1, canvas1, context1, smallContext1, smallCanvas1);
+            rotateCounterClockwise (player1.matrix, arena1, player1, nextPlayer1, canvas1, context1, smallContext1, smallCanvas1);
             break;
         }
         // change to breakMode
         case PAUSE: {
             paused.play();
             sound.stop();
-            clearInterval(interval);
+            clearInterval (interval);
             document.onkeydown = breakMode;
             pause.style.visibility = 'visible';
             iframe.style.visibility = 'visible';
@@ -68,7 +68,7 @@ var standardMode = function(e) {
 
 // breakMode, if the game is being paused
 // only ENTER works
-var breakMode = function(e) {
+var breakMode = function (e) {
     switch (e.keyCode) {
         case START: {
             paused.stop();
@@ -76,8 +76,8 @@ var breakMode = function(e) {
             document.onkeydown = standardMode;
             pause.style.visibility = 'hidden';
             iframe.style.visibility = 'hidden';
-            interval = setInterval(function() {
-                moveDown(arena1, player1, nextPlayer1, canvas1, context1, 'score', smallContext1, smallCanvas1);
+            interval = setInterval (function () {
+                moveDown (arena1, player1, nextPlayer1, canvas1, context1, 'score', smallContext1, smallCanvas1);
             }, 1000);
             break;
         }
@@ -86,7 +86,7 @@ var breakMode = function(e) {
 
 // GameOver mode if the player has lost
 // only ENTER works
-var gameOverMode = function(e) {
+var gameOverMode = function (e) {
     switch (e.keyCode) {
         case ENTER: {
             document.onkeydown = startmode;

@@ -1,5 +1,5 @@
 // The function creates the tiles in form of a matrix
-function createTiles(tiles) {
+function createTiles (tiles) {
 
     if (tiles === 'I') {
         return [
