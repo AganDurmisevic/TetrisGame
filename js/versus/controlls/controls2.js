@@ -19,15 +19,21 @@ var startmode = function(e) {
     switch (e.keyCode) {
         case START : {
             interval = setInterval(function() {
-                moveDown(arena1, player1, nextPlayer1, canvas1, context1, 'score', smallContext1, smallCanvas1);
-                moveDown(arena2, player2, nextPlayer2, canvas2, context2, 'scoreTwo', smallContext2, smallCanvas2);
+                moveDown(arena1, player1, nextPlayer1, canvas2, context2, 'scoreTwo', smallContext2, smallCanvas2);
+                moveDown(arena2, player2, nextPlayer2, canvas1, context1, 'score', smallContext1, smallCanvas1);
             }, 1000);
             start.style.visibility = 'hidden';
             tileReset(nextPlayer1, player1, arena1);
             tileReset(nextPlayer2, player2, arena2);
+<<<<<<< HEAD
             drawWorld(arena1, player1, nextPlayer1, canvas1, context1, smallContext1, smallCanvas1);
             drawWorld(arena2, player2, nextPlayer2, canvas2, context2, smallContext2, smallCanvas2);
             document.onkeydown = standardMode;
+=======
+            drawWorld(arena1, player1, nextPlayer1, canvas2, context2, smallContext2, smallCanvas2);
+            drawWorld(arena2, player2, nextPlayer2, canvas1, context1, smallContext1, smallCanvas1);
+            document.onkeydown = standardmode;
+>>>>>>> a90bdee1a4143a6c74fd3a101f6391115f757ab6
             break;
         }
     }
@@ -37,44 +43,89 @@ var standardMode = function(e) {
     switch(e.keyCode) {
         case DOWN: {
 
-            moveDown(arena1, player1, nextPlayer1, canvas1, context1, 'score', smallContext1, smallCanvas1);
+            moveDown(arena1, player1, nextPlayer1, canvas2, context2, 'scoreTwo', smallContext2, smallCanvas2);
             break;
         }
         case LEFT: {
+<<<<<<< HEAD
             moveLeft(arena1, player1, nextPlayer1, canvas1, context1, smallContext1, smallCanvas1);
+=======
+
+            moveLeft(arena1, player1, nextPlayer1, canvas2, context2, smallContext2, smallCanvas2);
+>>>>>>> a90bdee1a4143a6c74fd3a101f6391115f757ab6
             break;
         }
         case RIGHT: {
+<<<<<<< HEAD
             moveRight(arena1, player1, nextPlayer1, canvas1, context1, smallContext1, smallCanvas1);
+=======
+
+            moveRight(arena1, player1, nextPlayer1, canvas2, context2, smallContext2, smallCanvas2);
+>>>>>>> a90bdee1a4143a6c74fd3a101f6391115f757ab6
             break;
         }
         case ROTATE_LM: {
+<<<<<<< HEAD
             rotateClockwise(player1.matrix, arena1, player1, nextPlayer1, canvas1, context1, smallContext1, smallCanvas1);
+=======
+
+            rotateClockwise(player1.matrix, arena1, player1, nextPlayer1, canvas2, context2, smallContext2, smallCanvas2);
+>>>>>>> a90bdee1a4143a6c74fd3a101f6391115f757ab6
             break;
         }
         case ROTATE_RS: {
+<<<<<<< HEAD
             rotateCounterClockwise(player1.matrix, arena1, player1, nextPlayer1, canvas1, context1, smallContext1, smallCanvas1);
+=======
+
+            rotateCounterClockwise(player1.matrix, arena1, player1, nextPlayer1, canvas2, context2, smallContext2, smallCanvas2);
+>>>>>>> a90bdee1a4143a6c74fd3a101f6391115f757ab6
             break;
         }
         case RIGHT_D: {
+<<<<<<< HEAD
             moveRight(arena2, player2, nextPlayer2, canvas2, context2, smallContext2, smallCanvas2);
+=======
+
+            moveRight(arena2, player2, nextPlayer2, canvas1, context1, smallContext1, smallCanvas1);
+>>>>>>> a90bdee1a4143a6c74fd3a101f6391115f757ab6
             break;
         }
 
         case LEFT_A: {
+<<<<<<< HEAD
             moveLeft(arena2, player2, nextPlayer2, canvas2, context2, smallContext2, smallCanvas2);
+=======
+
+            moveLeft(arena2, player2, nextPlayer2, canvas1, context1, smallContext1, smallCanvas1);
+>>>>>>> a90bdee1a4143a6c74fd3a101f6391115f757ab6
             break;
         }
         case DOWN_S: {
+<<<<<<< HEAD
             moveDown(arena2, player2, nextPlayer2, canvas2, context2, 'scoreTwo', smallContext2, smallCanvas2);
+=======
+
+            moveDown(arena2, player2, nextPlayer2, canvas1, context1, 'score', smallContext1, smallCanvas1);
+>>>>>>> a90bdee1a4143a6c74fd3a101f6391115f757ab6
             break;
         }
         case ROTATE_L: {
+<<<<<<< HEAD
             rotateClockwise(player2.matrix, arena2, player2, nextPlayer2, canvas2, context2, smallContext2, smallCanvas2);
+=======
+
+            rotateClockwise(player2.matrix, arena2, player2, nextPlayer2, canvas1, context1, smallContext1, smallCanvas1);
+>>>>>>> a90bdee1a4143a6c74fd3a101f6391115f757ab6
             break;
         }
         case ROTATE_R: {
+<<<<<<< HEAD
             rotateCounterClockwise(player2.matrix, arena2, player2, nextPlayer2, canvas2, context2, smallContext2, smallCanvas2);
+=======
+
+            rotateCounterClockwise(player2.matrix, arena2, player2, nextPlayer2, canvas1, context1, smallContext1, smallCanvas1);
+>>>>>>> a90bdee1a4143a6c74fd3a101f6391115f757ab6
             break;
         }
         case PAUSE: {
@@ -95,8 +146,8 @@ var breakMode = function(e) {
             paused.stop();
             sound.play();
             interval = setInterval(function() {
-                moveDown(arena1, player1, nextPlayer1, canvas1, context1, 'score', smallContext1, smallCanvas1);
-                moveDown(arena2, player2, nextPlayer2, canvas2, context2, 'scoreTwo', smallContext2, smallCanvas2);
+                moveDown(arena1, player1, nextPlayer1, canvas2, context2, 'scoreTwo', smallContext2, smallCanvas2);
+                moveDown(arena2, player2, nextPlayer2, canvas1, context1, 'score', smallContext1, smallCanvas1);
             }, 1000);
             document.onkeydown = standardMode;
             pause.style.visibility = 'hidden';
