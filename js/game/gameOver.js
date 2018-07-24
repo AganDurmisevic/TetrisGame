@@ -12,11 +12,11 @@ function gameOver (arena, player) {
         /*setTimeout(function() {
             iframeCry.style.display = 'none';
             canvas.style.display = 'none';
-            canvasTwo.style.display = 'none';
             nextTile.style.display = 'none';
-            nextTile2.style.display = 'none';
             mainMenu.style.visibility = 'hidden';
             mainHighscore.style.visibility = 'hidden';
+            canvasTwo.style.display = 'none';
+            nextTile2.style.display = 'none';
             mainControlls.style.visibility = 'hidden';
         }, 3000);*/
 

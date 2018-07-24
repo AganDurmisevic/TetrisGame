@@ -14,13 +14,28 @@ html, body {
 
 @media only screen and (min-width: 1600px)  {
 
-    #pause, #start, #gameOverAnim {
+    #pause, #gameOverAnim {
 
         visibility: hidden;
         position: fixed;
         color: #DFDEFB;
         font-size: 38px;
         animation: pause 2s infinite;
+
+    }
+
+    #start {
+
+        visibility: hidden;
+        position: fixed;
+        color: #DFDEFB;
+        background: #39485E;
+        font-size: 38px;
+        animation: pause 2s infinite;
+        width: 140%;
+        height: 140%;
+        padding-top: 55%;
+        z-index: 100;
 
     }
 
@@ -381,7 +396,7 @@ html, body {
 
 @media only screen and (max-width: 1550px) {
 
-    #pause, #start, #gameOverAnim {
+    #pause, #gameOverAnim {
 
         visibility: hidden;
         position: fixed;
@@ -394,6 +409,21 @@ html, body {
     #pause {
 
         margin-top: 260px;
+
+    }
+
+    #start {
+
+        visibility: hidden;
+        position: fixed;
+        color: #DFDEFB;
+        background: #39485E;
+        font-size: 30px;
+        animation: pause 2s infinite;
+        width: 140%;
+        height: 140%;
+        padding-top: 70%;
+        z-index: 100;
 
     }
 
@@ -657,6 +687,7 @@ html, body {
         margin-top: -10px;
 
     }
+
     #nextTile {
 
         position: absolute;;
@@ -697,7 +728,6 @@ html, body {
         max-width: 400px;
 
     }
-
 
     .help {
 
