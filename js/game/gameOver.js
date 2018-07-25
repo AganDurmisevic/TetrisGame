@@ -19,7 +19,9 @@ function gameOver (arena, player) {
             canvas.style.display = 'none';
             nextTile.style.display = 'none';
             mainMenu.style.visibility = 'hidden';
-            mainControlls.style.visibility = 'hidden';
+            if(canvasTwo === undefined) {
+                mainControlls.style.visibility = 'hidden';
+            }
             canvasTwo.style.display = 'none';
             nextTile2.style.display = 'none';
             mainHighscore.style.visibility = 'hidden';
