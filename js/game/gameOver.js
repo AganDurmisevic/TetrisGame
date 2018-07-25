@@ -11,7 +11,7 @@ function gameOver (arena, player) {
         document.onkeydown = gameOverMode;
         iframeCry.style.visibility = 'visible';
         gameOverAnim.style.visibility = 'visible';
-        yourName = prompt("YOUR NAME: ", "");
+        yourName = prompt("YOUR NAME (IF IN MULTIPLAYER TYPE IN THE WINNERS NAME): ", "");
         addScore ();
 
         setTimeout (function() {
