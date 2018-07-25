@@ -1,13 +1,13 @@
 /**
  * This function checks a row and removes it if it is full
- * @param arena
- * @param player
- * @param nextPlayer
- * @param scoreCounter
- * @param canvas
- * @param context
- * @param smallContext
- * @param smallCanvas
+ * @param arena is the area in which the action takes place :)
+ * @param player is the tile that is being controlled by the player
+ * @param nextTile is the next tile that is being drawn in the small canvas
+ * @param scoreCounter is the place where the score of the player is being drawn
+ * @param canvas is the place where the arena is being drawn
+ * @param context is the tile that is being drawn
+ * @param smallContext is the tile that occurs next
+ * @param smallCanvas is the small box next to the big canvas in which the next tile is being drawn
  */
 function lineSweep (arena, player, nextTile, scoreCounter, canvas, context, smallContext, smallCanvas) {
     var rowCount = 0;

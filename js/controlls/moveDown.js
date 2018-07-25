@@ -1,5 +1,5 @@
 /**
- * Player down
+ * Moves the present tile down
  * @param arena
  * @param player
  * @param nextTile

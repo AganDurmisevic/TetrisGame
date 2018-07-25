@@ -1,9 +1,9 @@
 /**
  * This function creates a new tile
- * @param matrix
- * @param nextTile
- * @param smallContext
- * @param smallCanvas
+ * @param matrix is the matrix of the next tile that is being drawn
+ * @param nextTile is the tile that will occur next
+ * @param smallContext is the place where the next tile is being drawn
+ * @param smallCanvas is the small canvas next to the arena-canvas
  */
 function newTile (matrix, nextTile, smallContext, smallCanvas) {
 

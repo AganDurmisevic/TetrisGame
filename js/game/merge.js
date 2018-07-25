@@ -1,7 +1,7 @@
 /**
  * This function merges the player -/tile-matrix and the arena-matrix
- * @param arena
- * @param player
+ * @param arena is the area in which tetris is being played
+ * @param player is the current tile, which is moved by the player
  */
 function merge (arena, player) {
     player.matrix.forEach ((row, y) => {

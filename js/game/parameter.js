@@ -1,7 +1,4 @@
-/**
- * This function creates a new tile
- * @type {*[]}
- */
+// This is the file that gives the tetris game it's parameters to be executed
 var yourName = "";
 const colors = [
     null,

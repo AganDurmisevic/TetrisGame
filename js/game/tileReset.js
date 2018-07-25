@@ -1,8 +1,8 @@
 /**
  * This function resets the tile if it collides anywhere
- * @param nextTile
- * @param player
- * @param arena
+ * @param nextTile is the tile that occurs next
+ * @param player is the tile that the player controlled until now
+ * @param arena is the field where tetris is being played
  */
 function tileReset (nextTile, player, arena) {
 

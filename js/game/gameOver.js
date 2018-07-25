@@ -1,7 +1,7 @@
 /**
  * This function checks if the player has lost (if true - changes to GameOver mode)
- * @param arena
- * @param player
+ * @param arena is the tetris arena
+ * @param player is the current tile
  */
 function gameOver (arena, player) {
 

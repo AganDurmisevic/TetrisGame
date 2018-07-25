@@ -1,7 +1,6 @@
 /**
- * This function draws the matrix
- * @param matrix
- * @param offset
+ * @param matrix is the matrix that is being drawn
+ * @param offset is the gap to the matrix
  * @param context is the canvas
  */
 function drawMatrix (matrix, offset, context) {

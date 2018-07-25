@@ -1,5 +1,5 @@
 /**
- * EventListener
+ * EventListener for the controls of the game
  * @type {number}
  */
 const ENTER = 13;

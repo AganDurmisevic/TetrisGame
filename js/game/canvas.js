@@ -1,7 +1,5 @@
-/**
- * Canvas
- * @type {HTMLElement | null}
- */
+
+ // This is the Canvas for player one on which the tiles are being drawn, additionally there is a small Canvas which shows the next tile
 const canvas1 = document.getElementById ('canvas');
 const context1 = canvas1.getContext ('2d');
 const smallCanvas1 = document.getElementById ('nextTile');

@@ -1,5 +1,5 @@
 /**
- * This function records the highscore
+ * This function records the highscore and draws the highscorelist including the name of the player and the score of the player that was achieved
  * @type {any | Array}
  */
 var scorelist = JSON.parse (localStorage.getItem ("scorelist")) || [];
@@ -8,7 +8,6 @@ function drawHighscorelist () {
     document.getElementById ('highscorelist').innerHTML = "";
     scorelist.sort (function(a, b){return  a.score - b.score });
     scorelist.reverse();
-    debugger;
     longerThanFive ();
     for (let i = 1; i < scorelist.length + 1; i ++) {
         document.getElementById ('highscorelist').innerHTML += "<br>";
@@ -24,7 +23,7 @@ function longerThanFive () {
     }
 }
 
-// The function adds a score to the list
+// The function adds a score to the list and checks (if in multiplayermode) who of the players achieved a higher score
 function addScore () {
     scorelist.push ({ score: player1.score, name: yourName });
     localStorage.setItem ("scorelist", JSON.stringify (scorelist));

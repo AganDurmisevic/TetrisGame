@@ -1,15 +1,15 @@
 /**
- *
- * @param arena
- * @param player
- * @param nextPlayer
- * @param scoreCounter
- * @param canvas
- * @param context
- * @param smallContext
- * @param smallCanvas
+ * This function checks a row and removes it if it is full, this time it also places a row with an empty field in it to the arena of the opposing player
+ * @param arena is the area in which the action takes place :)
+ * @param player is the tile that is being controlled by the player
+ * @param nextTile is the next tile that is being drawn in the small canvas
+ * @param scoreCounter is the place where the score of the player is being drawn
+ * @param canvas is the place where the arena is being drawn
+ * @param context is the tile that is being drawn
+ * @param smallContext is the tile that occurs next
+ * @param smallCanvas is the small box next to the big canvas in which the next tile is being drawn
  */
-function lineSweep (arena, player, nextPlayer, scoreCounter, canvas, context, smallContext, smallCanvas) {
+function lineSweep (arena, player, nextTile, scoreCounter, canvas, context, smallContext, smallCanvas) {
 
     var rowCount = 0;
     const width = 12;
@@ -46,7 +46,7 @@ function lineSweep (arena, player, nextPlayer, scoreCounter, canvas, context, sm
                 }
             }
             console.log(random);
-            drawWorld (arena, player, nextPlayer, canvas, context, smallContext, smallCanvas);
+            drawWorld (arena, player, nextTile, canvas, context, smallContext, smallCanvas);
             console.log (counter);
             y ++;
             rowCount ++;
